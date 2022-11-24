@@ -1,0 +1,5 @@
+- Save project in cloud
+- Use save points (commits)
+- Development in parallel (merge and pull request)
+- Auto deploy (CI/CD)
+- Code review
