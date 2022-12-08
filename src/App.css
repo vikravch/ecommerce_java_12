@@ -1,38 +1,578 @@
-.App {
-  text-align: center;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    width: 100vw;
+    min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*-------------------------------------------- Mobile break-point------------------------------------------------*/
+
+@media screen and (max-width: 576px) {
+
+    .main {
+        background: #FFFFFF;
+    }
+
+    .header {
+        border-bottom: 1px solid grey;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 80px;
+    }
+
+    .logo {
+        width: 67px;
+        height: 30px;
+        margin: 0;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+        /* identical to box height, or 125% */
+
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.5px;
+
+        /* Base / White */
+
+        color: #FFFFFF;
+
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    ul{
+        flex-wrap: wrap;
+    }
+
+    li {
+        font-family: 'Inter', sans-serif;
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 500;
+        padding-left: 2vw;
+    }
+
+    li:hover {
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .promo {
+        display: flex;
+        height: 570px;
+        background-color: #17181F;
+    }
+
+
+    .nike {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-size: 30vw;
+        line-height: 300px;
+        /* identical to box height, or 16% */
+
+        text-align: center;
+        letter-spacing: -4.5px;
+
+        color: rgba(238, 237, 240, 0.1);
+    }
+
+    .search {
+        border: 1px solid white;
+        background: white url("/src/assets/Inputs/Glass.png") no-repeat center left 5px;
+        padding-left: 25px;
+        font-weight: 400;
+        flex-grow: 1;
+    }
+
+
+    .arrival {
+        width: 200px;
+        height: 44px;
+        left: 155px;
+        top: 748px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 44px;
+        /* identical to box height, or 122% */
+
+        letter-spacing: -1.2px;
+    }
+
+    .bar_code{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        /* identical to box height, or 112% */
+
+        letter-spacing: -0.5px;
+
+        /* Grey / Dark / 4 */
+
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .product_name{
+        width: 146px;
+        height: 40px;
+
+        /* Caption / 3 / Medium */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        /* or 112% */
+
+        letter-spacing: -0.5px;
+
+        /* Base / Black */
+
+        color: #000000;
+    }
+
+    /* NIKE */
+    .brandname {
+        position: absolute;
+        height: 80px;
+        left: 226px;
+        top: 333px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 500px;
+        line-height: 80px;
+        /* identical to box height, or 16% */
+
+        text-align: center;
+        letter-spacing: -4.5px;
+
+        color: rgba(238, 237, 240, 0.1);
+    }
+
+    .tittle {
+        margin: 2vh auto;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-size: 50px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: -4.5px;
+        color: rgba(238, 237, 240, 0.85);
+    }
+
+    .tittleSmall {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 16px;
+
+        text-align: center;
+        letter-spacing: -1px;
+
+        color: #EEEDF0;
+
+        text-shadow: 0 5px 12px rgba(203, 105, 193, 0.25);
+
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+/*-------------------------------------------- Desktop break-point------------------------------------------------*/
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+@media screen and (min-width: 576px) {
+
+
+    .header {
+        border-bottom: 1px solid grey;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 80px;
+    }
+
+
+    li {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        padding-left: 2vw;
+        color: grey;
+
+    }
+
+    li:hover {
+        color:#FFFFFF;
+    }
+
+    .hover_black:hover{
+        cursor: pointer;
+        color: white;
+    }
+
+    .hover_white:hover{
+        cursor: pointer;
+        color: black;
+    }
+
+
+
+    .search {
+        height: 25px;
+        border: 1px solid white;
+        background: black url("/src/assets/Inputs/Glass.png") no-repeat center left 5px;
+        border-radius: 8px;
+        color: white;
+        padding-left: 25px;
+        font-weight: 400
+    }
+
+    .promo {
+        display: flex;
+        height: 570px;
+        background-color: #17181F;
+    }
+
+    .tittle {
+        margin: auto;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-size: 72px;
+        line-height: 80px;
+        text-align: center;
+        letter-spacing: -4.5px;
+        color: rgba(238, 237, 240, 0.85);
+    }
+
+    .tittleSmall {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 30px;
+        /* identical to box height, or 125% */
+
+        text-align: center;
+        letter-spacing: -1px;
+
+        color: #EEEDF0;
+
+        text-shadow: 0 5px 12px rgba(203, 105, 193, 0.25);
+    }
+
+
+    .nike {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-size: 30vw;
+        line-height: 300px;
+        /* identical to box height, or 16% */
+
+        text-align: center;
+        letter-spacing: -4.5px;
+
+        color: rgba(238, 237, 240, 0.1);
+    }
+
+    .main {
+        overflow: hidden;
+        background: #FFFFFF;
+    }
+
+
+    .logo {
+        width: 67px;
+        height: 30px;
+        margin: 0;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+        /* identical to box height, or 125% */
+
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.5px;
+
+        /* Base / White */
+
+
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .arrival {
+        margin-bottom: 50px;
+        width: 200px;
+        height: 44px;
+        left: 155px;
+        top: 748px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 44px;
+        /* identical to box height, or 122% */
+
+        letter-spacing: -1.2px;
+    }
+
+    .sub {
+        position: relative;
+        display: flex;
+    }
+
+    .letter {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        /* identical to box height, or 125% */
+
+        letter-spacing: -1px;
+
+        /* Grey / Light / 4 */
+
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .subtittle {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 54px;
+        /* or 112% */
+
+        letter-spacing: -1.6px;
+
+        /* Base / White */
+
+        color: #FFFFFF;
+
+    }
+
+    .inputMail {
+        width: 50%;
+        margin-right: 1vw;
+        border-radius: 10px;
+    }
+
+    .fmenu{
+        margin: 0;
+        padding: 0;
+    }
+    .fmenu li{
+        margin: 0;
+        padding: 0;
+    }
+
+    .ftittle {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height, or 120% */
+
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.6px;
+
+        /* Base / White */
+
+        color: #FFFFFF;
+    }
+
+    .client_name
+    {
+        margin: 0;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height, or 120% */
+
+        letter-spacing: -0.6px;
+
+        /* Base / Black */
+
+        color: #000000;
+    }
+
+    .orders{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 54px;
+        /* identical to box height, or 112% */
+
+        display: flex;
+        align-items: center;
+        letter-spacing: -1.6px;
+
+        /* Base / Black */
+
+        color: #000000;
+    }
+
+    .grayfont{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        /* identical to box height, or 115% */
+        letter-spacing: -0.2px;
+
+        /* Grey / Dark / 3 */
+
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    .menu_profile{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+        /* identical to box height, or 111% */
+        letter-spacing: -0.3px;
+
+        /* Grey / Dark / 3 */
+
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    .db{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 34px;
+        /* identical to box height, or 121% */
+
+        text-align: center;
+        letter-spacing: -0.8px;
+
+        /* Accent 1 / 4 */
+
+        color: #2D74FF;
+
+    }
+
+    .orderspec
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0px 10px;
+        margin: 0;
+
+    }
+
+    .orderspec li{
+        padding: 0;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        /* identical to box height, or 115% */
+        letter-spacing: -0.2px;
+
+        /* Grey / Dark / 3 */
+
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    .orderspec .productname{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        /* identical to box height, or 112% */
+
+        letter-spacing: -0.5px;
+
+        /* Base / Black */
+
+        color: #000000;
+    }
+
+    .delivery_status{
+        margin-left: 10px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        /* identical to box height, or 120% */
+
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.5px;
+
+        /* Accent 1 / 4 */
+
+        color: #2D74FF;
+    }
+
+    .coast{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height, or 120% */
+
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.6px;
+
+        /* Base / Black */
+
+        color: #000000;
+    }
+    li span{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        /* identical to box height, or 115% */
+
+        letter-spacing: -0.2px;
+
+        /* Grey / Dark / 3 */
+
+        color: black;
+    }
 }
