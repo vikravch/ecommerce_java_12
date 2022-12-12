@@ -1,0 +1,59 @@
+//Sort Block
+.sortBlock {
+  grid-area: sort-block;
+  display: flex;
+  align-items: center;
+
+
+  .sortItem {
+    //width: 110px;
+    width: 130px;
+    height: 35px;
+    padding: 5px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+  }
+}
+
+.sortList {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  display: grid;
+  //row-gap: 5px;
+  z-index: 20;
+}
+
+.listItem {
+  //padding: 5px 5px 8px 5px;
+  padding: 5px;
+  margin: 2px;
+  //border-bottom: 1px solid #777;
+  font-size: 18px;
+  font-weight: 400;
+
+  &:hover {
+    background-color: #568FFF;
+    color: #FFFFFF;
+    border-radius: 5px;
+  }
+}
+
+.listItem:nth-child(3) {
+  border-bottom: none;
+}
+
+.listItemBlock:nth-child(3) {
+  hr {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+.off {
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: #568FFF;
+    svg {
+      path {
+      fill: #FFFFFF;
+      }
+    }
+  }
+}
+
+.on {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    background-color: #2D74FF;
+
+    svg {
+      path {
+        fill: #FFFFFF;
+      }
+    }
+}
