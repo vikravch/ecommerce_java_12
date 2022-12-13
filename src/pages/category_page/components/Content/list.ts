@@ -8,12 +8,19 @@ import product7 from '../../assets/img/img7.png'
 import product8 from '../../assets/img/img8.png'
 import product9 from '../../assets/img/img9.png'
 
-const products = [
+export interface Product {
+	id: number;
+	img: string;
+	title: string;
+	price: number;
+	sale?: number;
+}
+
+export const productsList: Product[] = [
 	{
 		id: 0,
 		img: product1,
 		title: 'Basic t-shirt',
-		rating: 5,
 		price: 35,
 		sale: 0
 	},
@@ -21,7 +28,6 @@ const products = [
 		id: 1,
 		img: product2,
 		title: 'Basic t-shirt',
-		rating: 5,
 		price: 35,
 		sale: 0
 	},
@@ -29,7 +35,6 @@ const products = [
 		id: 2,
 		img: product3,
 		title: 'Basic t-shirt',
-		rating: 5,
 		price: 35,
 		sale: 0
 	},
@@ -37,7 +42,6 @@ const products = [
 		id: 3,
 		img: product4,
 		title: 'Basic t-shirt',
-		rating: 5,
 		price: 35,
 		sale: 0
 	},
@@ -45,7 +49,6 @@ const products = [
 		id: 4,
 		img: product5,
 		title: 'Basic t-shirt',
-		rating: 5,
 		price: 35,
 		sale: 0
 	},
@@ -53,7 +56,6 @@ const products = [
 		id: 5,
 		img: product6,
 		title: 'Basic t-shirt',
-		rating: 5,
 		price: 35,
 		sale: 15
 	},
@@ -61,7 +63,6 @@ const products = [
 		id: 6,
 		img: product7,
 		title: 'Basic t-shirt',
-		rating: 5,
 		price: 35,
 		sale: 45
 	},
@@ -69,7 +70,6 @@ const products = [
 		id: 7,
 		img: product8,
 		title: 'Basic t-shirt',
-		rating: 5,
 		price: 35,
 		sale: 0
 	},
@@ -77,10 +77,8 @@ const products = [
 		id: 8,
 		img: product9,
 		title: 'Basic t-shirt',
-		rating: 5,
 		price: 35,
 		sale: 0
 	},
 ]
 
-export default products;

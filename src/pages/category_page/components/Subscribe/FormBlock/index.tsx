@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './FormBlock.module.scss'
 
-const FormBlock = () => {
+const FormBlock: React.FC = () => {
 	return (
 		<div className={styles.root}>
 		<div className={styles.childBlock}>

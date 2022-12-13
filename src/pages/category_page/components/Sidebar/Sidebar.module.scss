@@ -12,9 +12,9 @@
     left: 0;
     background-color: #FFFFFF;
     z-index: 10;
-    width: 100%;
-    //transition: ;
-
+    width: 80%;
+    height: 100vh;
+    overflow: scroll;
   }
 }
 
@@ -64,6 +64,14 @@
   justify-content: space-between;
   margin-bottom: 15px;
   cursor: pointer;
+
+  @media (max-width: 767px) {
+    justify-content: start;
+    margin-left: 10px;
+    svg {
+      margin-left: 15px;
+    }
+  }
 
   &:hover {
     transition: color 0.15s ease-in-out;
@@ -132,6 +140,10 @@
       opacity: 1;
     }
   }
+
+  @media (max-width: 767px) {
+    margin-left: 15px;
+  }
 }
 
 .categoryListItem {
@@ -165,29 +177,4 @@
 .sizeList {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-}
-
-// Size List Item's order
-.sizeListItem:nth-child(1) {
-  order: 1;
-}
-
-.sizeListItem:nth-child(2) {
-  order: 3;
-}
-
-.sizeListItem:nth-child(3) {
-  order: 5;
-}
-
-.sizeListItem:nth-child(4) {
-  order: 2;
-}
-
-.sizeListItem:nth-child(5) {
-  order: 4;
-}
-
-.sizeListItem:nth-child(6) {
-  order: 6;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Pagination.module.scss'
 
-const Pagination = () => {
+const Pagination: React.FC = () => {
 	return (
 		<div className={styles.root}>
 			<ul className={styles.paginationBlock}>

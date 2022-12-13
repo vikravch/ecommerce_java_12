@@ -1,26 +1,18 @@
 import React from 'react';
 import styles from "./Sidebar.module.scss";
-import CheckboxForSizes from "../../UI/CheckboxForSizes";
-import { sizes } from "./list";
+import {ListItem, style} from './list'
+import Radio from "../../UI/Ratio";
 
-const SizesList = () => {
-	const [isOpen, setIsOpen] = React.useState(true)
+const StylesList: React.FC = () => {
 	
-	// const [clickedItem, setClickedItem] = React.useState(null)
-	// const [checkedInput, setCheckedInput] = React.useState(false)
-	// const [chosenItems, setChosenItems] = React.useState([])
-	// const clickOnItem = (index) => {
-	// 	setClickedItem(prevState => prevState === index ? null : index)
-	// 	setCheckedInput(!checkedInput)
-	// }
-
+	const [isOpen, setIsOpen] = React.useState<boolean>(true)
 	
 	return (
-		<div className={styles.sizesBlock}>
-			<div className={styles.sizeListDropDownItem}
-			     onClick={() => setIsOpen(!isOpen)}
-			>
-				<h4 className={styles.sizeListTitle}>Size</h4>
+		<div className={styles.stylesBlock}>
+			<div
+				onClick={() => setIsOpen(!isOpen)}
+				className={styles.styleListDropDownItem}>
+				<h4 className={styles.styleListTitle}>Style</h4>
 				<i className={styles.dropDownIcon}>
 					<svg
 						className={isOpen ? styles.up : styles.down}
@@ -31,13 +23,13 @@ const SizesList = () => {
 					</svg>
 				</i>
 			</div>
-			{isOpen && <ul className={styles.sizeList}>
-				{sizes.map(({title}, id) => (
-					<CheckboxForSizes key={id} item={title} id={title} />
+			{isOpen && <ul className={styles.styleList}>
+				{style.map(({value}: ListItem, id) => (
+						<Radio key={id} value={value} id={value}/>
 				))}
 			</ul>}
 		</div>
 	);
 };
 
-export default SizesList;
+export default StylesList;

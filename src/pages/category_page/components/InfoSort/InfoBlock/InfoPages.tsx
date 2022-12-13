@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "../../../presentation/CategoryPage.module.scss";
 
-const InfoPages = () => {
+const InfoPages: React.FC = () => {
 	return (
 		<div className={styles.categoryInfoPages}>
 			<span>Men</span>

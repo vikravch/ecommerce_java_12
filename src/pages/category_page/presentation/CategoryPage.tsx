@@ -1,17 +1,13 @@
 import React from "react";
-import InfoSort from "../components/InfoSort/index";
-import Sidebar from "../components/Sidebar/index";
-import Content from "../components/Content/index";
-import Pagination from "../components/Pagination/index";
-import Subscribe from "../components/Subscribe/index";
+import InfoSort from "../components/InfoSort";
+import Sidebar from "../components/Sidebar";
+import Content from "../components/Content";
+import Pagination from "../components/Pagination";
+import Subscribe from "../components/Subscribe";
 import '../index.scss'
 import styles from "./CategoryPage.module.scss";
 
-type Props = {
-
-}
-
-export const CategoryPage: React.FC = (props: Props) => {
+export const CategoryPage: React.FC = () => {
   return (
     <main>
       <div className={styles.wrapper}>

@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './AddToCartBtn.module.scss'
 
-const AddToCartBtn = () => {
+const AddToCartBtn: React.FC = () => {
 	
-	const [isActive, setIsActive] = React.useState(false)
+	const [isActive, setIsActive] = React.useState<boolean>(false)
 	
 	return (
 		<div

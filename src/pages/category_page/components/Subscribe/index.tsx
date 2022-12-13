@@ -3,7 +3,7 @@ import styles from './Subscribe.module.scss'
 import FormBlock from "./FormBlock";
 import ProductBlock from "./ProductBlock";
 
-const Subscribe = () => {
+const Subscribe: React.FC = () => {
 	return (
 		<div className={styles.subscribeBlock}>
 		<FormBlock />

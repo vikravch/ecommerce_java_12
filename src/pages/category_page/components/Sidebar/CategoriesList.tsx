@@ -1,26 +1,19 @@
 import React from 'react';
 import styles from "./Sidebar.module.scss";
-import Checkbox from "../../UI/Checkbox/index";
-import { prices } from "./list";
+import { categories } from "./list";
+import {ListItem} from "./list";
 
-const PricesList = () => {
+const CategoriesList: React.FC = () => {
 	
-	const [isOpen, setIsOpen] = React.useState(true);
-	
-	// const [clickedItem, setClickedItem] = React.useState(null)
-	// const [checkedInput, setCheckedInput] = React.useState(false)
-	// const [chosenItems, setChosenItems] = React.useState([])
-	// const clickOnItem = (index) => {
-	// 	setClickedItem(prevState => prevState === index ? null : index)
-	// 	setCheckedInput(!checkedInput)
-	// }
+	const [isOpen, setIsOpen] = React.useState<boolean>(true)
+	const [isActiveClass, setIsActiveClass] = React.useState<number>(0)
 	
 	return (
-		<div className={styles.pricesBlock}>
+		<div className={styles.categoriesBlock}>
 			<div
 				onClick={() => setIsOpen(!isOpen)}
-				className={styles.priceListDropDownItem}>
-				<h4 className={styles.priceListTitle}>Price</h4>
+				className={styles.categoryListDropDownItem}>
+				<h4 className={styles.categoryListTitle}>Category</h4>
 				<i className={styles.dropDownIcon}>
 					<svg
 						className={isOpen ? styles.up : styles.down}
@@ -31,13 +24,18 @@ const PricesList = () => {
 					</svg>
 				</i>
 			</div>
-			{isOpen && <ul className={styles.priceList}>
-				{prices.map(({title}, id) => (
-						<Checkbox id={title} key={id} item={title}/>
+			{isOpen && <ul className={styles.categoryList}>
+				{categories.map(({value}: ListItem, id) => (
+					<li
+						onClick={() => setIsActiveClass(id)}
+						className={isActiveClass === id ? styles.categoryListItemActive : styles.categoryListItem}
+						key={id}
+					>{value}
+					</li>
 				))}
 			</ul>}
 		</div>
 	);
 };
 
-export default PricesList;
+export default CategoriesList;

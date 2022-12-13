@@ -3,7 +3,7 @@ import styles from "../../presentation/CategoryPage.module.scss";
 import CategoryInfoBlock from "./InfoBlock/CategoryInfoBlock";
 import SortBlock from "./SortBlock/SortBlock";
 
-const InfoSort = () => {
+const InfoSort: React.FC = () => {
 	return (
 		<div className={styles.categoryBlock}>
 			<CategoryInfoBlock />

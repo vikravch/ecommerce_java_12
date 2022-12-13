@@ -3,7 +3,7 @@ import styles from "../../../presentation/CategoryPage.module.scss";
 import InfoPages from "./InfoPages";
 import InfoTitle from "./InfoTitle";
 
-const CategoryInfoBlock = () => {
+const CategoryInfoBlock: React.FC = () => {
 	return (
 		<div className={styles.categoryInfo}>
 			<InfoPages />

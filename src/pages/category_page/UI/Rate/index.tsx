@@ -1,10 +1,15 @@
 import React from 'react';
 import styles from './Rating.module.scss'
 
-const Rating = ({ cardId, onClickProduct }) => {
+interface RatingProps {
+	cardId: number;
+	onClickProduct: (id: number, rating: number) => void;
+}
+
+const Rating: React.FC<RatingProps> = ({ cardId, onClickProduct }) => {
 	
-	const [rating, setRating] = React.useState(0);
-	const [hover, setHover] = React.useState(0);
+	const [rating, setRating] = React.useState<number>(0);
+	const [hover, setHover] = React.useState<number>(0);
 	
 	// const clickMe = (id) = {
 	//

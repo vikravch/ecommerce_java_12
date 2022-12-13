@@ -3,7 +3,8 @@
 .collectionItemLabel,
 .brandItemLabel,
 .styleItemLabel,
-.seasonItemLabel {
+.seasonItemLabel,
+.sizeItemLabel{
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -24,10 +25,24 @@ label:hover::before, input[type='checkbox']:hover + label::before {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
 
-  //&:hover {
-  //  background-color: #ECECEC;
-  //}
+//.sizeItemLabel {
+//  font-style: normal;
+//  font-weight: 400;
+//  font-size: 16px;
+//  line-height: 18px;
+//  display: flex;
+//  cursor: pointer;
+//}
+label:hover::before, input[type=checkbox]:hover + label::before {
+  background-color: #568FFF;
+}
+
+.sizeCheckBox{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 input[type='checkbox'] {
@@ -54,4 +69,30 @@ input[type='checkbox']:checked + label::before {
   justify-content: center;
   font-size: 16px;
   font-weight: 600;
+}
+
+
+// Size List Item's order
+.sizeCheckBox:nth-child(1) {
+  order: 1;
+}
+
+.sizeCheckBox:nth-child(2) {
+  order: 3;
+}
+
+.sizeCheckBox:nth-child(3) {
+  order: 5;
+}
+
+.sizeCheckBox:nth-child(4) {
+  order: 2;
+}
+
+.sizeCheckBox:nth-child(5) {
+  order: 4;
+}
+
+.sizeCheckBox:nth-child(6) {
+  order: 6;
 }

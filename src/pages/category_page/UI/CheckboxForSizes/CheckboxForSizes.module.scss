@@ -14,10 +14,6 @@ label:hover::before, input[type=checkbox]:hover + label::before {
   display: flex;
   align-items: center;
   cursor: pointer;
-
-  //&:hover {
-  //  background-color: #ECECEC;
-  //}
 }
 
 input[type='checkbox'] {
