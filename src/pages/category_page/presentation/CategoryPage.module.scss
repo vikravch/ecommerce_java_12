@@ -24,7 +24,7 @@ main {
   width: 1200px;
   display: grid;
   grid-template-areas:
-  'categoryBlock categoryBlock'
+  'InfoSort InfoSort'
   'sidebar       content'
   'paginationBlock paginationBlock';
   grid-template-rows: 175px 1fr 120px;
@@ -33,14 +33,10 @@ main {
   @media (max-width: 767px) {
     width: 100%;
     grid-template-areas:
-  'categoryBlock'
+  'InfoSort'
   'sidebar'
   'content'
   'paginationBlock'
-    //  'categoryBlock categoryBlock'
-    //  'sidebar sort-block'
-    //  'content content'
-    //  'paginationBlock paginationBlock'
   ;
     grid-template-rows: 50px 40px 1fr 120px;
     grid-template-columns: 100%;
@@ -51,7 +47,7 @@ main {
 
 //Category Info
 .categoryBlock {
-  grid-area: categoryBlock;
+  grid-area: InfoSort;
   display: flex;
   justify-content: space-between;
 

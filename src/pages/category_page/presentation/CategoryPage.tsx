@@ -1,11 +1,11 @@
 import React from "react";
 import InfoSort from "../components/InfoSort";
-import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
 import Pagination from "../components/Pagination";
 import Subscribe from "../components/Subscribe";
 import '../index.scss'
 import styles from "./CategoryPage.module.scss";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 export const CategoryPage: React.FC = () => {
   return (

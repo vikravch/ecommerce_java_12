@@ -1,42 +1,24 @@
 import React from 'react';
-import styles from './Checkbox.module.scss'
-import {ListItem} from "../../components/Sidebar/list";
+import './Checkbox.scss'
+import {Item} from "../../components/Sidebar/types";
 
-interface CheckboxProps {
-	id: string;
-	value: string;
-	list: ListItem[];
+type CheckboxProps = {
+	obj: {
+		name: string;
+		inputType?: string;
+	};
+	category: Item
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({id, value, list}) => {
-
-	const [chosenCategories, setChosenCategories] = React.useState<string[]>([])
-	
-	const handleClickChosenCategories = (category: string) => {
-		console.log(chosenCategories)
-		setChosenCategories(prevState => {
-			let res = prevState.includes(category)
-			if (res) {
-				let newArr = prevState.filter(item => item !== category)
-				return [...newArr]
-			} else {
-				return [...prevState, category]
-			}
-		})
-	}
-	
+const Checkbox: React.FC<CheckboxProps> = ({ obj, category }) => {
 	
 	return (
-		<li
-			className={list.length === 6 ? styles.sizeCheckBox :styles.collectionCheckBox}
-			key={id}>
-			<input
-				type="checkbox"
-				id={id}/>
-			<label
-				onClick={() => handleClickChosenCategories(value)}
-				htmlFor={id} className={styles.collectionItemLabel}>{value}</label>
-		</li>
+		<div
+			key={category}
+			className={`${obj.name}__checkbox checkbox__container`}>
+			{obj.inputType ? (<input className={`${obj.name}__input input`} type={obj.inputType} name="" id={category}/>) : ''}
+			<label className={`${obj.name}__label label`} htmlFor={category}>{category}</label>
+		</div>
 	);
 };
 

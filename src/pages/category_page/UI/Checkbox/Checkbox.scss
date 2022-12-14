@@ -1,0 +1,123 @@
+// For Input[type=CheckboxFirst]
+label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  cursor: pointer;
+}
+
+label:hover::before, input[type=checkbox]:hover + label::before {
+  background-color: #568FFF;
+}
+
+input[type='checkbox'] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+label::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  margin-right: 7px;
+}
+
+input[type='checkbox']:checked + label::before {
+  background-color: #2D74FF;
+  content: '\2713';
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+//For Categories Block (none label::before)
+.label:nth-child(1)::before {
+  display: none;
+}
+
+
+// Size-Containers-CheckBox order
+.Size__checkbox:nth-child(1) {
+  order: 1;
+}
+
+.Size__checkbox:nth-child(2) {
+  order: 3;
+}
+
+.Size__checkbox:nth-child(3) {
+  order: 5;
+}
+
+.Size__checkbox:nth-child(4) {
+  order: 2;
+}
+
+.Size__checkbox:nth-child(5) {
+  order: 4;
+}
+
+.Size__checkbox:nth-child(6) {
+  order: 6;
+}
+
+
+// For Input[type=Radio]
+
+//.styleItemLabel {
+//  font-style: normal;
+//  font-weight: 400;
+//  font-size: 16px;
+//  line-height: 18px;
+//  display: flex;
+//  cursor: pointer;
+//}
+.Style__label:hover::before, input[type='radio']:hover + .Style__label::before {
+  background-color: #568FFF;
+}
+
+//.styleCheckBox {
+//  display: flex;
+//  align-items: center;
+//  cursor: pointer;
+//
+//  &:hover {
+//    background-color: #f3f3f3;
+//  }
+//}
+
+input[type='radio'] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.Style__label::before {
+  content: '';
+  margin-right: 7px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+input[type='radio']:checked + .Style__label::before {
+  content: '\26AC';
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2D74FF;
+}
+
+

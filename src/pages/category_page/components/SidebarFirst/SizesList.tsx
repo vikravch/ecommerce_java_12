@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from "./Sidebar.module.scss";
-// import CheckboxForSizes from "../../UI/CheckboxForSizes";
+// import Checkbox from "../../UI/Checkbox";
 import {ListItem, sizes} from "./list";
-import Checkbox from "../../UI/Checkbox";
+import Checkbox from "../../UI/CheckboxFirst";
 
 const SizesList: React.FC = () => {
 	const [isOpen, setIsOpen] = React.useState<boolean>(true)
@@ -34,7 +34,6 @@ const SizesList: React.FC = () => {
 			</div>
 			{isOpen && <ul className={styles.sizeList}>
 				{sizes.map(({value}: ListItem, id) => (
-					// <CheckboxForSizes key={id} value={value} id={value} />
 					<Checkbox list={sizes} key={id} value={value} id={value} />
 				))}
 			</ul>}

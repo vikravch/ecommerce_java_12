@@ -1,12 +1,11 @@
 import React from 'react';
 import styles from "./Sidebar.module.scss";
-import Checkbox from "../../UI/Checkbox";
-import { brands } from "./list";
-import {ListItem} from "./list";
+import Checkbox from "../../UI/CheckboxFirst";
+import {ListItem, prices} from "./list";
 
-const BrandsList: React.FC = () => {
+const PricesList: React.FC = () => {
 	
-	const [isOpen, setIsOpen] = React.useState<boolean>(true)
+	const [isOpen, setIsOpen] = React.useState<boolean>(true);
 	
 	// const [clickedItem, setClickedItem] = React.useState(null)
 	// const [checkedInput, setCheckedInput] = React.useState(false)
@@ -16,13 +15,12 @@ const BrandsList: React.FC = () => {
 	// 	setCheckedInput(!checkedInput)
 	// }
 	
-	
 	return (
-		<div className={styles.brandsBlock}>
+		<div className={styles.pricesBlock}>
 			<div
 				onClick={() => setIsOpen(!isOpen)}
-				className={styles.brandListDropDownItem}>
-				<h4 className={styles.brandListTitle}>Brand</h4>
+				className={styles.priceListDropDownItem}>
+				<h4 className={styles.priceListTitle}>Price</h4>
 				<i className={styles.dropDownIcon}>
 					<svg
 						className={isOpen ? styles.up : styles.down}
@@ -33,14 +31,13 @@ const BrandsList: React.FC = () => {
 					</svg>
 				</i>
 			</div>
-			{isOpen &&
-				<ul className={styles.brandList}>
-					{brands.map(({value}: ListItem, id) => (
-							<Checkbox list={brands} key={id} id={value} value={value}/>
-					))}
-				</ul>}
+			{isOpen && <ul className={styles.priceList}>
+				{prices.map(({value}: ListItem, id) => (
+						<Checkbox list={prices} id={value} key={id} value={value}/>
+				))}
+			</ul>}
 		</div>
 	);
 };
 
-export default BrandsList;
+export default PricesList;

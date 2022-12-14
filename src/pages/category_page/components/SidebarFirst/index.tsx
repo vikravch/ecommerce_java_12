@@ -16,10 +16,13 @@ const Sidebar: React.FC = () => {
 	const handleChangeStyles = () => {
 		setIsOpen(prevState => !prevState)
 		document.body.style.backgroundColor = '#43434387'
+		// document.body.scroll()
+		document.body.style.overflow = 'hidden'
 	}
 	
 	const closeSideBar = () => {
 		document.body.style.backgroundColor = ''
+		document.body.style.overflow = ''
 	}
 	
 	// React.useEffect(() => {
