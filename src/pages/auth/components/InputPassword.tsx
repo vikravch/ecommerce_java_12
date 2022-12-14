@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import style from "../../../../../../project/ecommerce_java_12/src/pages/auth/presentation/Loginization.module.css";
+import style from "../presentation/Loginization.module.css";
 import {Controller, Field, useForm, useFormContext} from "react-hook-form";
 import {FiEye, FiEyeOff} from "react-icons/fi";
 

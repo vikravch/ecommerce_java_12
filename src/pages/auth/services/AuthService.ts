@@ -1,6 +1,6 @@
 import {AxiosResponse} from "axios"
-import {AuthResponse} from "../../../../../../project/ecommerce_java_12/src/pages/auth/models/AuthResponse";
-import instance from "../../../../../../project/ecommerce_java_12/src/pages/auth/http/api";
+import {AuthResponse} from "../models/AuthResponse";
+import instance from "../http/api";
 
 
  export const authAPI = {

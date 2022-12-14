@@ -1,7 +1,7 @@
 import React from 'react';
 import {Controller, useFormContext} from "react-hook-form";
-import style from "../../../../../../project/ecommerce_java_12/src/pages/auth/presentation/Loginization.module.css";
-import {ILoginField} from "../../../../../../project/ecommerce_java_12/src/pages/auth/login.interface";
+import style from "../presentation/Loginization.module.css";
+import {ILoginField} from "../login.interface";
 
 const InputEmail = () => {
        const {

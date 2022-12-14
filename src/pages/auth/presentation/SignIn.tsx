@@ -6,16 +6,16 @@ import InputPassword from "../components/InputPassword";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaSignIn} from "../components/validations";
 import {useDispatch} from "react-redux";
-import {login} from "../../../../../../project/ecommerce_java_12/src/pages/auth/store/authReducer";
+import {login} from "../store/authReducer";
 
 export const SignIn = () => {
     const dispatch = useDispatch();
     // @ts-ignore
-    const {methods, setError, formState: { errors }}  = useForm({resolver: yupResolver(schemaSignIn)});
+    const methods = useForm({resolver: yupResolver(schemaSignIn)});
 
     const onSubmit = (data: any) => {
         // @ts-ignore
-        dispatch(login(data.email, data.password, setError))
+        dispatch(login(data.email, data.password))
     };
     // @ts-ignore
     // @ts-ignore
@@ -47,7 +47,7 @@ export const SignIn = () => {
                     <button className={style.buttonLogin}>Login</button>
                 </form>
             </FormProvider>
-            {errors.server && <div style={{ color: 'red' }}>{errors.server.message}</div>}
+
             <div>
                 <Link className={style.linkBottom} to={'../restorepassword'}>
                     <p>

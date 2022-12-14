@@ -1,6 +1,6 @@
-import instance from "../../../../../../project/ecommerce_java_12/src/pages/auth/http/api";
+import instance from "../http/api";
 import {AxiosResponse} from "axios";
-import {IUser} from "../../../../../../project/ecommerce_java_12/src/pages/auth/models/IUser";
+import {IUser} from "../models/IUser";
 
 export const fetchAPI = {
     fetchUsers():Promise<AxiosResponse<IUser[]>>{

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from "../../../../../../project/ecommerce_java_12/src/pages/auth/presentation/Loginization.module.css";
+import style from "../presentation/Loginization.module.css";
 import {Controller, useFormContext} from "react-hook-form";
 
 const InputName = () => {

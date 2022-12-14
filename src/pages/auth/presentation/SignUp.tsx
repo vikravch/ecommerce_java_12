@@ -9,7 +9,7 @@ import React from "react";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaSignUp} from "../components/validations";
 import {useDispatch} from "react-redux";
-import {registration} from "../../../../../../project/ecommerce_java_12/src/pages/auth/store/authReducer";
+import {registration} from "../store/authReducer";
 
 
 export const SignUp = () => {

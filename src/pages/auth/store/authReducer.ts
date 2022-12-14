@@ -25,7 +25,7 @@ export const setAuthUserData = (email: any, password: any, isAuth: boolean) => (
         {email, password, isAuth}
 });
 
-export const login = (email: any, password: any, setError) =>
+export const login = (email: any, password: any) =>
     async (dispatch: (arg0: { type: string; payload: { email: any; password: any; }; }) => void) => {
         // @ts-ignore
         try {
@@ -36,10 +36,7 @@ export const login = (email: any, password: any, setError) =>
             dispatch(setAuthUserData(email, password, true));
         } catch (e) {
 
-            // @ts-ignore
-            setError('server', {
-                message: e.response?.data?.message
-            })
+
             // @ts-ignore
             console.log(e.response?.data?.message)
         }
