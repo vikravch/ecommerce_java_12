@@ -5,6 +5,7 @@ import {LoginPage} from "./pages/auth/presentation/LoginPage";
 import {CartMainPage} from "./pages/cart/presentation/CartMainPage";
 import {MainPage} from "./pages/main_page/presentation/MainPage";
 
+
 function App() {
   return (
     <Routes>

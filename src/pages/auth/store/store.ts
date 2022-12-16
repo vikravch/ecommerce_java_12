@@ -2,11 +2,11 @@ import {combineReducers} from "redux";
 // @ts-ignore
 import {composeWithDevTools} from "redux-devtools-extension";
 
-import authReducer from "./authReducer";
+import authReducer from "./reducers/authReducer";
 import {configureStore} from "@reduxjs/toolkit";
 
 const rootReducer = combineReducers({
-    authReducer
+    auth: authReducer
 })
 
 export const setupSore = () => {
