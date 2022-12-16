@@ -30,15 +30,15 @@ export const login = (email: any, password: any) =>
         // @ts-ignore
         try {
             const response = await authAPI.login(email, password);
-            console.log(response.data);
-            console.log(response.data.user);
-            localStorage.setItem('token', response.data.accesssToken);
+            console.log(response.data.attrs.data);
+            console.log(response.data.attrs.message);
+            localStorage.setItem('token', response.data.attrs.data.accesssToken);
             dispatch(setAuthUserData(email, password, true));
         } catch (e) {
 
 
             // @ts-ignore
-            console.log(e.response?.data?.message)
+            console.log(e)
         }
     }
 

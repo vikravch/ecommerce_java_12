@@ -7,15 +7,18 @@ import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaSignIn} from "../components/validations";
 import {useDispatch} from "react-redux";
 import {login} from "../store/authReducer";
+import {IFormData} from "../models/formData";
 
 export const SignIn = () => {
     const dispatch = useDispatch();
-    // @ts-ignore
-    const methods = useForm({resolver: yupResolver(schemaSignIn)});
 
-    const onSubmit = (data: any) => {
+    const methods = useForm<IFormData>({resolver: yupResolver(schemaSignIn)});
+
+    const onSubmit = (data: IFormData) => {
+
         // @ts-ignore
         dispatch(login(data.email, data.password))
+        console.log(data.email)
     };
     // @ts-ignore
     // @ts-ignore

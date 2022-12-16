@@ -4,10 +4,11 @@ import {Link} from "react-router-dom";
 import InputEmail from "../components/InputEmail";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaRestorePassword} from "../components/validations";
+import {IFormData} from "../models/formData";
 
 export const RestorePassword = () => {
-    const methods = useForm({resolver: yupResolver(schemaRestorePassword)});
-    const onSubmit = (data: any) => console.log(data);
+    const methods = useForm<IFormData>({resolver: yupResolver(schemaRestorePassword)});
+    const onSubmit = (data: IFormData) => console.log(data);
     return (
         <div className={style.wrapperLogin}>
             <div className={style.titleContainer}>

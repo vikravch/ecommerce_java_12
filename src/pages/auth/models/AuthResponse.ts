@@ -3,6 +3,7 @@
 import {IUser} from "./IUser";
 
 export interface AuthResponse {
+    attrs: any;
     accesssToken: string;
     refreshToken: string;
     user: IUser;

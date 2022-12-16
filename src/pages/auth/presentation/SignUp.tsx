@@ -10,15 +10,18 @@ import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaSignUp} from "../components/validations";
 import {useDispatch} from "react-redux";
 import {registration} from "../store/authReducer";
+import {IUser} from "../models/IUser";
+import {IFormData} from "../models/formData";
 
 
 export const SignUp = () => {
     const dispatch = useDispatch();
 
-    const methods = useForm({resolver: yupResolver(schemaSignUp)});
-    const onSubmit = (data: any) => {
-       // @ts-ignore
+    const methods = useForm<IFormData>({resolver: yupResolver(schemaSignUp)});
+    const onSubmit = (data: IFormData) => {
+        // @ts-ignore
         dispatch(registration(data.email, data.password))
+        console.log(data)
     };
     return (
         <div className={style.wrapperLogin}>
@@ -43,8 +46,8 @@ export const SignUp = () => {
                 <form className={style.formStyle} onSubmit={methods.handleSubmit(onSubmit)}>
                     <InputName/>
                     <InputEmail/>
-                    <InputPassword />
-                    <InputConfirmPassword />
+                    <InputPassword/>
+                    <InputConfirmPassword/>
 
                     <div>
                         <button className={style.buttonLogin}>Sign up</button>

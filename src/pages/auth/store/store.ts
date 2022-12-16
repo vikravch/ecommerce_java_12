@@ -1,11 +1,20 @@
-import {applyMiddleware, combineReducers, createStore} from "redux";
+import {combineReducers} from "redux";
 // @ts-ignore
 import {composeWithDevTools} from "redux-devtools-extension";
-import thunk from "redux-thunk";
+
 import authReducer from "./authReducer";
+import {configureStore} from "@reduxjs/toolkit";
 
 const rootReducer = combineReducers({
     authReducer
 })
 
-export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware((thunk))))
+export const setupSore = () => {
+    return configureStore({
+        reducer: rootReducer
+    })
+}
+
+export type RootState = ReturnType<typeof rootReducer>
+export type AppStore = ReturnType<typeof setupSore>
+export type AppDispatch = AppStore[`dispatch`]
