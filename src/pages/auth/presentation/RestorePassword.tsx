@@ -5,12 +5,21 @@ import InputEmail from "../components/InputEmail";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaRestorePassword} from "../components/validations";
 import {IFormData} from "../models/formData";
+import {useAppDispatch, useAppSelector} from "../hooks/redux";
+import React from "react";
+import {restorePasswordCreator} from "../store/actionCreators/restorePasswordCreator";
 
 export const RestorePassword = () => {
+    const dispatch = useAppDispatch();
+    const{error, isLoading} = useAppSelector(state => state.restorePassword)
     const methods = useForm<IFormData>({resolver: yupResolver(schemaRestorePassword)});
-    const onSubmit = (data: IFormData) => console.log(data);
+    const onSubmit = (data: IFormData) => {
+        dispatch(restorePasswordCreator(data.email))
+    }
     return (
         <div className={style.wrapperLogin}>
+            {isLoading && <h1>LOADING..............</h1>}
+            {error && <h1>{error}</h1>}
             <div className={style.titleContainer}>
                 <div className={style.title1}>
                     <p>Restore password</p>

@@ -3,7 +3,7 @@
 
 export interface AuthResponse {
     id: number | null
-    accessToken: string | null
+    accessToken?: string | null
     isLoading: boolean,
     error:string
 

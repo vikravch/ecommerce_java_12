@@ -9,19 +9,23 @@ import React from "react";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaSignUp} from "../components/validations";
 import {IFormData} from "../models/formData";
+import {useAppDispatch, useAppSelector} from "../hooks/redux";
+import {registrationCreator} from "../store/actionCreators/regCreator";
 
 
 export const SignUp = () => {
-   // const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
+    const {error, isLoading} = useAppSelector(state => state.registration)
 
     const methods = useForm<IFormData>({resolver: yupResolver(schemaSignUp)});
     const onSubmit = (data: IFormData) => {
-       // @ts-ignore
-       // dispatch(registration(data.email, data.password))
-        console.log(data)
+        // @ts-ignore
+        dispatch(registrationCreator(data.name,data.email, data.password, ))
     };
     return (
         <div className={style.wrapperLogin}>
+            {isLoading && <h1>LOADING..............</h1>}
+            {error && <h1>{error}</h1>}
             <div className={style.titleContainer}>
                 <div className={style.title1}>
                     <p>Sign Up</p>

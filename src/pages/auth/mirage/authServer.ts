@@ -20,8 +20,16 @@ createServer({
 
         this.post("/api/registration", (schema, request) => {
             let attrs = JSON.parse(request.requestBody)
-            attrs.errors = {errors: "You have successfully registered!"}
+            attrs.errors = {error: "You have successfully registered!"}
+            return attrs.errors;
+        })
+
+        this.post("/api/restorePassword", (schema, request) => {
+            let attrs = JSON.parse(request.requestBody)
+            attrs.errors = {error: "To reset your password, follow the link in the email"}
             return attrs.errors;
         })
     },
 })
+
+
