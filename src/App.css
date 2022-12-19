@@ -235,10 +235,20 @@ body {
 
 
 
-    .search {
+    .searchWhite {
         height: 25px;
         border: 1px solid white;
-        background: black url("/src/assets/Inputs/Glass.png") no-repeat center left 5px;
+        background: black url("/src/assets/Inputs/seachIcon.svg") no-repeat center left 5px;
+        border-radius: 8px;
+        color: white;
+        padding-left: 25px;
+        font-weight: 400
+    }
+
+    .search {
+        height: 30px;
+        border: 1px solid white;
+        background: black url("/src/assets/Inputs/seachIconBlack.svg") no-repeat center left 5px;
         border-radius: 8px;
         color: white;
         padding-left: 25px;
