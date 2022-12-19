@@ -1,0 +1,234 @@
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 750px;
+    left: 0;
+    top: 80px;
+    background: rgba(0, 0, 0, 0.05);
+    opacity: 0.9;
+}
+
+.wrapperLogin {
+    position: absolute;
+    padding: 30px;
+    /*margin: auto;*/
+    width: 410px;
+    height: auto;
+    left: 33%;
+    top: 100px;
+
+    /* Base / White */
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+input{
+    outline: none;
+    border: none;
+    font-size: 18px;
+
+}
+
+.inputStyles {
+    display: grid;
+    grid-template-columns: auto auto;
+
+
+
+    /*box-sizing: border-box;*/
+
+    /*position: absolute;*/
+    width: 350px;
+    height: 50px;
+    left: 625px;
+    top: 375px;
+    margin-bottom: 16px;
+
+    /* Base / White */
+
+    background: #FFFFFF;
+    /* Grey / Dark / 2 */
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-left: 30px;
+    font-size: 18px;
+}
+
+.inputStyles::placeholder {
+    /*width: 100px;*/
+    height: 25px;
+
+    /* Caption / 2 / Regular */
+
+    /*font-family: 'Inter';*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.3px;
+
+    /* Grey / Dark / 3 */
+
+    color: rgba(0, 0, 0, 0.4);
+    /*color: black;*/
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.buttonLogin {
+    /*position: absolute;*/
+    /*left: 625px;*/
+    /*right: 625px;*/
+    /*top: 507px;*/
+    /*bottom: 751px;*/
+
+    width: 350px;
+    height: 50px;
+    left: 625px;
+    top: 375px;
+    margin-bottom: 16px;
+    padding: 0;
+    /* Accent 1 / 4 */
+
+    background: #2D74FF;
+    border-radius: 10px;
+
+    color: #FFFFFF;
+    /*font-family: 'Inter';*/
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    /*line-height: 20px;*/
+
+    /*padding-left: 50px;*/
+
+}
+
+.titleContainer {
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: 2fr auto auto;
+    align-self: center;
+}
+
+.title1 {
+    /*font-family: 'Inter';*/
+    align-self: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    /* identical to box height, or 121% */
+
+    letter-spacing: -0.8px;
+
+    /* Base / Black */
+
+    color: #000000;
+}
+
+.title2 {
+    justify-self: end;
+    align-self: center;
+    /*position: absolute;*/
+    /*width: 156px;*/
+    /*height: 15px;*/
+    /*left: 773px;*/
+    /*top: 250px;*/
+
+    /* Caption / 4 / Medium */
+
+    /*font-family: 'Inter';*/
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    /* identical to box height, or 115% */
+
+    /*text-align: right;*/
+    letter-spacing: -0.2px;
+
+    /* Grey / Dark / 3 */
+
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.link {
+    /*font-family: 'Inter';*/
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    /* identical to box height, or 115% */
+
+    text-align: right;
+    letter-spacing: -0.2px;
+
+    /* Accent 1 / 4 */
+
+    color: #2D74FF;
+}
+
+.linkBottom {
+    /*font-family: 'Inter';*/
+    text-align: center;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    /* identical to box height, or 115% */
+
+    letter-spacing: -0.2px;
+
+    /* Accent 1 / 4 */
+
+    color: #2D74FF;
+
+}
+
+.signUpTextBottom {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    /* or 138% */
+
+    /*display: flex;*/
+    /*align-items: center;*/
+    text-align: center;
+    letter-spacing: -0.2px;
+
+    /* Grey / Dark / 4 */
+
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+.signUpTextBottomSpan {
+    color: rgba(0, 0, 0, 1);
+}
+
+.formStyle {
+    display: grid;
+    justify-items: center;
+
+}
+
+.iconInInputPassword{
+display: grid;
+    justify-content: center;
+    align-content: center;
+}
