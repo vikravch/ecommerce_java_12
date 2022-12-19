@@ -1,0 +1,22 @@
+.socialMedia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  .telRan {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: gray;
+  }
+
+  .socialIcons {
+    .socialIcon {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      padding: 14px 14px 10px 14px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+}

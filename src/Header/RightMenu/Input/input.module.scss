@@ -1,0 +1,20 @@
+.searchBlock {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2px 10px;
+  &:focus-within{
+    border: 1px solid #80ED99;
+    border-radius: 10px;
+  }
+
+  .input {
+    border: hidden;
+    padding: 5px;
+    &:focus {
+      outline: none;
+    }
+  }
+}

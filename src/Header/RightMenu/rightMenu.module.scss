@@ -1,0 +1,17 @@
+.rightMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &>i {
+    cursor: pointer;
+  }
+
+  &>* {
+    margin-right: 30px;
+  }
+  &>*:nth-child(3) {
+    margin-right: 0;
+  }
+
+}

@@ -1,0 +1,79 @@
+.footer {
+  background-color: #000000;
+  height: 478px;
+  padding: 60px 155px 0 155px;
+  color: white;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.info {
+  flex-grow: 1;
+  border-bottom: 1px solid gray;
+
+  .infoList {
+    display: flex;
+    justify-content: start;
+
+    & > * {
+      margin-left: 70px;
+    }
+
+    & > *:nth-child(1) {
+      margin-left: 0;
+    }
+
+    ul > li {
+      justify-self: start;
+    }
+  }
+
+  .infoListItem {
+    color: grey;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+}
+
+
+
+.productsList {}
+
+.getHelpList {}
+
+.legalsList {}
+
+.contactList {
+  .gmail {
+    color: white;
+  }
+  .phone {
+    color: #2D74FF;
+  }
+  .address {
+    color: white;
+  }
+
+  .gmail, .phone, .address {
+    margin-bottom: 14px;
+  }
+}
+
