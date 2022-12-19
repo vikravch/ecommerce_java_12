@@ -1,0 +1,125 @@
+.mainInfo {
+  display: grid;
+  height: 199px;
+  width: 303px;
+
+  .tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px 6px;
+    width: 49px;
+    height: 24px;
+    background: #FA4A69;
+    border-radius: 20px;
+
+    .sale {
+      padding-top: 1px;
+      padding-left: 2px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 18px;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  .name {
+    width: 204px;
+    height: 44px;
+    left: 1085px;
+    top: 199px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /* Headline / 4 */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+
+    letter-spacing: -1.2px;
+
+    /* Base / Black */
+
+    color: #000000;
+  }
+
+  .prescription {
+    width: 300px;
+    height: 69px;
+    left: 1085px;
+    top: 258px;
+
+    /* Body / 15 */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    /* or 153% */
+
+    letter-spacing: -0.6px;
+
+    /* Grey / Dark / 4 */
+
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .price{
+    width: 99px;
+    height: 34px;
+    left: 1082px;
+    top: 325px;
+
+    .clearPrice{
+      width: 52px;
+      height: 34px;
+      left: 1082px;
+      top: 325px;
+
+
+      /* Headline / 5 */
+
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 34px;
+      /* identical to box height, or 121% */
+
+      text-align: right;
+      letter-spacing: -0.8px;
+
+      /* Base / Black */
+      color: #000000;
+    }
+    .oldPrice{
+      width: 38px;
+      height: 30px;
+      left: 1143px;
+      top: 329px;
+      margin-left: 9px;
+      text-decoration: #FA4A69 line-through;
+
+      /* Body / 21 */
+
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 30px;
+      /* identical to box height, or 143% */
+
+      text-align: right;
+      letter-spacing: -0.8px;
+
+      /* Grey / Dark / 3 */
+
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}

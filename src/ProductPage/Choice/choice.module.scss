@@ -1,0 +1,138 @@
+.choice {
+  margin-top: 24px;
+  width: 360px;
+  height: 355px;
+  display: grid;
+  grid-template-rows: 1px 119px 88px 60px;
+  grid-row-gap: 25px;
+
+  .line {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    width: 360px;
+    height: 1px;
+  }
+
+  .color {
+    width: 350px;
+    height: 119px;
+
+  }
+
+  .selected {
+    margin-bottom: 21px;
+
+    .wordColor {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18px;
+      /* identical to box height, or 112% */
+
+      letter-spacing: -0.5px;
+
+      /* Grey / Dark / 3 */
+
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    .selectedColor {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18px;
+      /* identical to box height, or 112% */
+
+      letter-spacing: -0.5px;
+
+      /* Base / Black */
+
+      color: #000000;
+    }
+  }
+
+  .photos {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: 80px;
+    margin-bottom: 27px;
+    gap:10px;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .size {
+    .sizesWords{
+      display: flex;
+      justify-content: space-between;
+
+      a{
+        text-decoration: none;
+      }
+    }
+    .chosenSize{
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18px;
+      /* identical to box height, or 112% */
+
+      letter-spacing: -0.5px;
+
+      /* Grey / Dark / 3 */
+
+      color: rgba(0, 0, 0, 0.3);
+    }
+    .selectSize {
+      margin-top: 20px;
+
+      select{
+        theme: 'bootstrap';
+        box-sizing: border-box;
+        width: 360px;
+        height: 50px;
+
+        /* Grey / Dark / 2 */
+
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .buttonWrapper {
+    .addToBag{
+      width: 281px;
+      height: 60px;
+      border-radius: 10px;
+      border:none;
+      background: #2D74FF;
+
+      .svgCart{
+        left: 16.67%;
+        right: 16.67%;
+        top: 8.33%;
+        bottom: 8.33%;
+      }
+      .buttonText{
+        margin-left:14px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        /* identical to box height, or 120% */
+        letter-spacing: -0.6px;
+        /* Base / White */
+
+        color: #FFFFFF;
+      }
+    }
+  }
+}

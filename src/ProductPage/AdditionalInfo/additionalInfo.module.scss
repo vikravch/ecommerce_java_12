@@ -1,0 +1,24 @@
+.additionalInfoWrapper{
+  width: 360px;
+  height: 266px;
+  .lineTop{
+    margin: 10px 0 10px 0;
+  }
+  div div h2 button{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    /* or 111% */
+
+    letter-spacing: -0.3px;
+
+    /* Base / Black */
+
+    color: #000000;
+  }
+  .lineBottom{
+    margin:1px 0;
+  }
+}
