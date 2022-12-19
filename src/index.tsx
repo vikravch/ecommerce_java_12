@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
-import {setupSore} from "./pages/auth/store/store";
+import {setupSore} from "./general/redux/store";
 
 import "../src/pages/auth/mirage/authServer"
 

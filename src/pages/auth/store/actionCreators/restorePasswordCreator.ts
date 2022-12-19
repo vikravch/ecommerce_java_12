@@ -1,4 +1,4 @@
-import {AppDispatch} from "../store";
+import {AppDispatch} from "../../../../general/redux/store";
 import {authAPI} from "../../services/AuthService";
 import {AxiosResponse} from "axios";
 import {AuthResponse} from "../../models/AuthResponse";

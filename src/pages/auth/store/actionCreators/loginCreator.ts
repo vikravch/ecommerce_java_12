@@ -1,4 +1,4 @@
-import {AppDispatch} from "../store";
+import {AppDispatch} from "../../../../general/redux/store";
 import {authAPI} from "../../services/AuthService";
 import {AxiosResponse} from "axios";
 import {AuthResponse} from "../../models/AuthResponse";
@@ -12,7 +12,7 @@ export const loginCreator = (email: string, password: string) => async (dispatch
         const response: AxiosResponse<AuthResponse> = await authAPI.login(email, password);
         console.log(response.data.id)
         console.log(response.data)
-        if (response.data.accessToken != null && response.data.accessToken != undefined) {
+        if (response.data.accessToken && response.data.accessToken) {
 
             dispatch(loginSlice.actions.loginFetchingSuccess(response.data.accessToken))
         } else {

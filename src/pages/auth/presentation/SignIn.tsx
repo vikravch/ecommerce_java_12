@@ -6,7 +6,7 @@ import InputPassword from "../components/InputPassword";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaSignIn} from "../components/validations";
 import {IFormData} from "../models/formData";
-import {useAppDispatch, useAppSelector} from "../hooks/redux";
+import {useAppDispatch, useAppSelector} from "../../../general/hooks/redux";
 import {useEffect} from "react";
 import {loginCreator} from "../store/actionCreators/loginCreator";
 

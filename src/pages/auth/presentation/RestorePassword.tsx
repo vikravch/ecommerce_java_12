@@ -5,7 +5,7 @@ import InputEmail from "../components/InputEmail";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaRestorePassword} from "../components/validations";
 import {IFormData} from "../models/formData";
-import {useAppDispatch, useAppSelector} from "../hooks/redux";
+import {useAppDispatch, useAppSelector} from "../../../general/hooks/redux";
 import React from "react";
 import {restorePasswordCreator} from "../store/actionCreators/restorePasswordCreator";
 

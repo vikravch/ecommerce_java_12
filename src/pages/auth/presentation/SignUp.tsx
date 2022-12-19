@@ -9,7 +9,7 @@ import React from "react";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaSignUp} from "../components/validations";
 import {IFormData} from "../models/formData";
-import {useAppDispatch, useAppSelector} from "../hooks/redux";
+import {useAppDispatch, useAppSelector} from "../../../general/hooks/redux";
 import {registrationCreator} from "../store/actionCreators/regCreator";
 
 

@@ -4,7 +4,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 const SET_USER_DATA = 'auth/SET_USER_DATA';
 
-let initialState: AuthResponse = {
+const initialState: AuthResponse = {
     id: null,
     accessToken: '',
     isLoading: false,
