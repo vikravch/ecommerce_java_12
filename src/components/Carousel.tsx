@@ -28,7 +28,7 @@ const Carousel = () => {
                 <h1 className={'tittleSmall'}>Explore the best Air Max for fall & beyond</h1>
                 <h1 className={'nike'}>NIKE</h1>
                 <div  style={{position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
-                    <Zoomx/>
+                    <img alt={'logo'} style={{width: '50%'}} src={require("../assets/subshoes.png")}/>
                 </div>
                 <div style={{position: 'absolute', bottom: '5vw', left: '0'}}>
                     <button className={'btn btn-primary'}>Buy now</button>

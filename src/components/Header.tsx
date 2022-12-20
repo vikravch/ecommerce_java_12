@@ -3,6 +3,7 @@ import React from 'react';
 import search from '../assets/Navigation Menu/VectorGlass.png';
 import {AccountIcon} from '../components/ui/AccountIcon';
 import {CartIcon} from "./ui/CartIcon";
+import Carousel from "./Carousel";
 
 interface Props
 {
@@ -13,6 +14,7 @@ const Header: React.FC<Props> = (props) => {
 
     return (
         <div>
+            <Carousel/>
         <div className={'header'} style={props.changetheme.theme}>
             <div style={{display: 'flex', alignItems: 'center', marginLeft: '2vw'}}>
             <p className={'logo'}>LOGO</p>
