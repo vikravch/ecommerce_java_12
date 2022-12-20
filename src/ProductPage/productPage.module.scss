@@ -33,37 +33,30 @@
   }
 }
 
-.galleryWrapper img.imgBig{
-  width: 750px;
-  height: 960px;
-}
-
-.contentWrapper {
+.galleryWrapper {
   display: grid;
-  justify-content: center;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: 35px 925px;
+  background-image: url("./Photos/bigImg/image 4.svg");
 
-  .content {
+  .content{
     display: grid;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 51px 648px 51px;
+    grid-template-columns: 70px 610px 70px;
+    .prevButRow{
+      display: grid;
+      justify-items: center;
+      align-items: center;
+    }
+    .nextButRow{
+      display: grid;
+      align-items: center;
+      justify-items: center;
+    }
   }
-
-  .prevButRow {
-    display: grid;
-    align-content: center;
-    z-index: 1;
+  .closeButWrapper{
+    display:grid;
+    justify-items: end;
+    .closeBut{
+      margin: 15px;
+    }
   }
-
-  .nextButRow {
-    display: grid;
-    align-content: center;
-  }
-   .closeButWrapper{
-     display:grid;
-     justify-items: end;
-   }
 }

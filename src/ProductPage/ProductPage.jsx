@@ -5,9 +5,9 @@ import img1 from './Photos/1.png'
 import img2 from './Photos/2.png'
 import img3 from './Photos/3.png'
 import img4 from './Photos/4.png'
-import img4_1 from './Photos/bigImg/image 4.svg'
 import Choice from "./Choice/Choice";
 import AdditionalInfo from "./AdditionalInfo/AdditionalInfo";
+
 
 const ProductPage = () => {
     return (
@@ -21,9 +21,8 @@ const ProductPage = () => {
                 <div className="modal fade" id="img1" tabIndex="-1" aria-labelledby="exampleModalLabel"
                      aria-hidden="true">
                     <div className="modal-dialog modal-lg">
-                        <div className={styles.galleryWrapper}>
-                            <img className={styles.imgBig} src={img4_1} alt={'text'}/>
-                            <div className={styles.contentWrapper}>
+                        <div className="container" style={{width: '750px', height: '960px', padding: 0}}>
+                            <div className={styles.galleryWrapper}>
                                 <div className={styles.closeButWrapper}>
                                     <div className={styles.closeBut}>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -43,6 +42,7 @@ const ProductPage = () => {
                                                 fill="black" fillOpacity="0.3"/>
                                         </svg>
                                     </div>
+                                    <div></div>
                                     <div className={styles.nextButRow}>
                                         <svg width="18" height="28" viewBox="0 0 18 28" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -55,10 +55,7 @@ const ProductPage = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-
                 <div className={styles.rightSidebar}>
                     <MainInfo/>
                     <Choice/>
