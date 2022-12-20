@@ -1,0 +1,53 @@
+.general{
+    font-family: 'Inter';
+    font-style: normal;
+}
+.linkMain{
+
+
+
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.3px;
+
+
+    color: rgba(0, 0, 0, 0.3);
+
+
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.linkWishlist{
+
+
+
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.3px;
+
+
+    color: #000000;
+
+
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.titleCart{
+    margin-top: 40px;
+}

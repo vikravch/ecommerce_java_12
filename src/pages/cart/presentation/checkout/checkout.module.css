@@ -1,0 +1,617 @@
+
+.goods{
+    box-sizing: border-box;
+
+
+    height: 407px;
+    width: 385px;
+    margin-top: 40px;
+
+
+
+
+
+    background: #FFFFFF;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.goodsTitle{
+
+    width: 85px;
+    height: 34px;
+    margin: 23px 0 25px 30px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+
+    letter-spacing: -0.8px;
+
+
+    color: #000000;
+}
+.clothes{
+    width: 105px;
+    height: 127px;
+    margin: 0 15px 0 30px;
+    border-radius: 10px;
+}
+.id{
+
+
+
+    margin: 0 0 5px 0;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+
+    letter-spacing: -0.2px;
+
+
+    color: rgba(0, 0, 0, 0.3);
+}
+.nameOne{
+
+
+
+    margin-bottom:  9px ;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+
+    letter-spacing: -0.5px;
+
+
+    color: #000000;
+}
+.nameTwo{
+    letter-spacing: -0.2px;
+
+    color: rgba(0, 0, 0, 0.3);
+}
+.color{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    margin-bottom:  5px ;
+}
+
+.size{
+    letter-spacing: -0.2px;
+
+
+    color: rgba(0, 0, 0, 0.3);
+}
+.sizeItem{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 0 124px 5px 0;
+}
+
+.quantity{
+
+    letter-spacing: -0.2px;
+
+
+    color: rgba(0, 0, 0, 0.3);
+}
+.quantityItem{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 0 146px 9px 0;
+}
+.price{
+
+    margin: 0 180px 0 0;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+
+    letter-spacing: -0.5px;
+
+
+    color: #000000;
+}
+
+
+
+.contacts{
+
+    width: 630px;
+    heigh: 1134px;
+
+
+
+}
+
+.blogContacts{
+    display: flex;
+    width-max: 630px;
+    height-max: 158px;
+
+}
+.blogAddress{
+
+    width-max: 630px;
+    height-max: 313px;
+}
+.countryZipcode{
+    display: flex;
+
+}
+.radio{
+    display: flex;
+}
+
+.map{
+    display: flex;
+    text-decoration: none;
+
+}
+.summary{
+    box-sizing: border-box;
+    margin-top: 20px;
+
+
+
+    width: 385px;
+    height: 288px;
+
+
+
+    background: #FFFFFF;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.title{
+
+    width: 123px;
+    height: 34px;
+
+    margin: 23px 207px 20px 30px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+
+    letter-spacing: -0.8px;
+
+
+    color: #000000;
+}
+.textSummary{
+
+    width: 220px;
+    height: 23px;
+
+    margin: 0 0 15px 30px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+
+    letter-spacing: -0.6px;
+
+
+    color: #000000;
+}
+.textPromocode{
+    width: 220px;
+    height: 23px;
+
+    margin: 0 0 0 30px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+
+    letter-spacing: -0.6px;
+
+
+    color: #000000;
+}
+
+.promocode{
+
+    width: 80px;
+    height: 23px;
+
+    margin: 0 30px 0 0;
+    padding-left: 194px;
+
+
+    text-align: right;
+    letter-spacing: -0.6px;
+
+
+    color: #2D74FF;
+}
+
+.subTotalPrice{
+    width: 80px;
+    height: 23px;
+
+    margin: 0px 30px 15px 0px;
+    padding-left: 208px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+
+    text-align: right;
+    letter-spacing: -0.6px;
+
+
+    color: #000000;
+}
+.service{
+    width: 80px;
+    height: 23px;
+
+    margin: 0px 30px 15px 0px;
+    padding-left: 90px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+
+    text-align: right;
+    letter-spacing: -0.6px;
+
+
+    color: #000000;
+}
+.line{
+
+    height: 1px;
+    width-max: 300px;
+
+    margin: 30px 30px 27px 30px;
+
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+.total{
+    width: 45px;
+    height: 24px;
+
+    margin: 0px 204px 28px 30px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.6px;
+
+
+    color: #000000;
+
+
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.totalPrice{
+
+    width: 49px;
+    height: 24px;
+
+    margin: 30px 30px 28px 204px;
+
+}
+h3{
+
+    height: 30px;
+
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+
+    letter-spacing: -1px;
+
+
+    color: #000000;
+}
+h3:after {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);;
+    width:520px;
+    float: right;
+    margin-top: 15px;
+
+}
+.addressTitle{
+
+    margin: 80px 0px 30px 0px;
+}
+.paymentTitle{
+
+    margin: 40px 0px 30px 0px;
+}
+.contactsTitle{
+
+    margin: 40px 0px 30px 0px;
+
+}
+.generalText{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+
+    letter-spacing: -0.5px;
+
+
+    color: rgba(0, 0, 0, 0.3);
+}
+input{
+    box-sizing: border-box;
+
+
+    width-max: 305px;
+    height-max: 50px;
+
+
+
+    background: #FFFFFF;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.inputItem{
+    box-sizing: border-box;
+    width: 305px;
+    height: 50px;
+    background: #FFFFFF;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+
+
+.shippingMethod{
+
+    width: 72px;
+    height: 20px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+
+    letter-spacing: -0.3px;
+
+
+    color: #000000;
+}
+.shippingPrice{
+
+    width: 147px;
+    height: 20px;
+
+    color: rgba(0, 0, 0, 0.3);
+}
+.chooseMap{
+
+    width: 95px;
+    height: 15px;
+
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+
+    text-align: right;
+    letter-spacing: -0.2px;
+    border: 0;
+    background-color: #FFFFFF;
+
+    color: #2D74FF;
+}
+.inputAddressAndWishes{
+    box-sizing: border-box;
+
+
+    width: 630px;
+    height: 50px;
+
+
+
+    background: #FFFFFF;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.paymentButton{
+    box-sizing: border-box;
+
+
+
+    width: 70px;
+    height: 50px;
+
+    background: url("../../img/BASE.svg");
+
+
+    border-radius: 4px;
+}
+.cartVisaMastercart{
+    box-sizing: border-box;
+
+
+    width: 410px;
+    height: 50px;
+
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+
+    color: rgba(0, 0, 0, 0.3);
+
+
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    background: #FFFFFF;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: url("../../img/Vector.svg") no-repeat 4px;
+    border-radius: 10px;
+
+}
+.PurchaseButton{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 18px 20px;
+    gap: 10px;
+
+    position: absolute;
+    height: 60px;
+
+
+
+    background: #2D74FF;
+    border-radius: 10px;
+}
+.PurchaseText{
+    width: 168px;
+    height: 24px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.6px;
+
+
+    color: #FFFFFF;
+
+
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.chooseMap{
+    text-align: right;
+    width: 305px;
+}
+
+.buttonPurchase{
+    margin-bottom: 116px;
+}
+
+.linkMain{
+
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+
+    margin-top: 30px;
+    display: flex;
+    /*align-items: center;*/
+    letter-spacing: -0.3px;
+
+
+    color: rgba(0, 0, 0, 0.3);
+
+
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.linkWishlist{
+
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.3px;
+
+
+    color: #000000;
+
+
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
