@@ -32,8 +32,8 @@ export const Summary: React.FC = (props) => {
                                 <span className={s.total}>Total<span className={s.totalPrice}>$98.00</span></span>
                             </div>
                             <hr className={s.line}/>
-
-                            <button className={s.buttonCheckout}><span className={s.checkout}><a className='nav-link' href={'http://localhost:3000/cart/checkout'}>Checkout</a></span></button>
+                            <div>
+                            <button className={s.buttonCheckout}><span className={s.checkout}><a className='nav-link' href={'http://localhost:3000/cart/checkout'}>Checkout</a></span></button></div>
                         </td>
                     </tr>
                 </table>
