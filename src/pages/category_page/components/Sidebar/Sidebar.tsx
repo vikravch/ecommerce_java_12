@@ -22,7 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({setIsOpenSidebar, isOpenSidebar}) => {
 	return (
 			<aside>
 				<div className={'filterBtn'} onClick={() => handleOpenSidebar()}>filter</div>
-				<div className={`${isOpenSidebar ? 'bg__sidebar' : ''}`}>
+				<div className={isOpenSidebar ? 'bg__sidebar' : ''}>
 					<div className={isOpenSidebar ? 'sidebar__mobile' : 'sidebar__desktop'}>
 						{isOpenSidebar && (
 							<div className={'closeBtn'}>
