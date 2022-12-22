@@ -1,3 +1,4 @@
+@import "src/pages/category_page/styles/variables";
 //Sort Block
 .sortBlock {
   grid-area: sort-block;
@@ -10,7 +11,7 @@
     width: 130px;
     height: 35px;
     padding: 5px 10px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid $border_bottom_color;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -25,7 +26,7 @@
   top: 34px;
   left: 0;
   width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid $border_bottom_color;
   border-radius: 10px;
   background-color: #f3f3f3;
   display: grid;
@@ -42,7 +43,7 @@
   line-height: 20px;
 
   &:hover {
-    background-color: #568FFF;
+    background-color: $bg_hover_color;
     color: #FFFFFF;
     border-radius: 5px;
   }

@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from "../../../presentation/CategoryPage.module.scss";
-import InfoPages from "./InfoPages";
+import Breadcrumbs from "./Breadcrumbs";
 import InfoTitle from "./InfoTitle";
 
 const CategoryInfoBlock: React.FC = () => {
 	return (
 		<div className={styles.categoryInfo}>
-			<InfoPages />
+			<Breadcrumbs />
 			<InfoTitle />
 		</div>
 	);

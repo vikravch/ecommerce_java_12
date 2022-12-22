@@ -1,23 +1,49 @@
 import React from 'react';
 import './Checkbox.scss'
-import {Item} from "../../components/Sidebar/types";
+import {Category, MenuItem} from "../../components/Sidebar/types";
 
 type CheckboxProps = {
-	obj: {
-		name: string;
-		inputType?: string;
-	};
-	category: Item
+	menu: MenuItem
+	category: Category;
+	id: number;
+	handleChangeClass: (id: number) => void;
+	isActiveCategory: number;
+	// setMenuData: (prevState: MenuItem) => MenuItem;
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({ obj, category }) => {
+const Checkbox: React.FC<CheckboxProps> = ({menu, category, id, handleChangeClass, isActiveCategory}, setMenuData) => {
+	
+	// React.useEffect(() => {
+	// 	// console.log(setMenuCollection)
+	// }, [])
+	
+	const toggleChecked = (name: string) => {
+		setMenuData((prevState: MenuItem) => {
+			prevState.items.filter((item: Category) => {
+				console.log(item)
+				if (item.name !== name) {
+					return item
+				}
+				return {
+					...item,
+					isChecked: !item.isChecked
+				}
+			})
+		})
+		
+	}
 	
 	return (
 		<div
-			key={category}
-			className={`${obj.name}__checkbox checkbox__container`}>
-			{obj.inputType ? (<input className={`${obj.name}__input input`} type={obj.inputType} name="" id={category}/>) : ''}
-			<label className={`${obj.name}__label label`} htmlFor={category}>{category}</label>
+			className={`${menu.name}__checkbox checkbox__container`}>
+			{menu.inputType ? (
+				<input className={`${menu.name}__input input`} type={menu.inputType} checked={category.isChecked} onChange={() => toggleChecked(category.name)} id={category.name}/>) : ''}
+			{menu.name !== 'Categories' ? (<label
+				className={`${menu.name}__label label`} htmlFor={category.name}>{category.name}</label>) : (<label
+					onClick={() => handleChangeClass(id)}
+					className={`${isActiveCategory === id ? 'active__category' : 'category__label'} label`}
+					htmlFor={category.name}>{category.name}</label>
+			)}
 		</div>
 	);
 };

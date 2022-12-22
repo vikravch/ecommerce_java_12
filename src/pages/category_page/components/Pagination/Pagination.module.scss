@@ -1,10 +1,12 @@
+@import "src/pages/category_page/styles/variables";
+
+
 .root {
   grid-area: paginationBlock;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  //padding: 20px 100px 48px 0;
 }
 
 .paginationBlock {
@@ -30,7 +32,7 @@
   color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
   &:hover {
-    background-color: #568FFF;
+    background-color: $bg_hover_color;
     color: #FFFFFF;
     svg {
       path {
@@ -42,7 +44,7 @@
 }
 
 .active {
-  background-color: #2D74FF;
+  background-color: $bg_active_color;
   color: #FFFFFF;
   width: calc(100% / 7);
   height: 50px;

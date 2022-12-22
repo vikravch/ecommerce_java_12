@@ -8,11 +8,15 @@ import styles from "./CategoryPage.module.scss";
 import Sidebar from "../components/Sidebar/Sidebar";
 
 export const CategoryPage: React.FC = () => {
+  
+  const [isOpenSidebar, setIsOpenSidebar] = React.useState<boolean>(false)
+
+  
   return (
     <main>
-      <div className={styles.wrapper}>
+      <div className={`${styles.wrapper}`}>
         <InfoSort />
-        <Sidebar />
+        <Sidebar isOpenSidebar={isOpenSidebar} setIsOpenSidebar={setIsOpenSidebar} />
         <Content />
         <Pagination />
       </div>

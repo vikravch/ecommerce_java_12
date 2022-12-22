@@ -1,8 +1,11 @@
-export interface MenuItems {
+export interface MenuItem {
 	name: string;
 	icon?: string;
 	inputType?: string;
-	items: Item[];
+	items: Category[];
 }
 
-export type Item = string
+export type Category = {
+	name: string;
+	isChecked?: boolean;
+}

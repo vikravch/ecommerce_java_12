@@ -1,3 +1,5 @@
+@import "src/pages/category_page/styles/variables";
+
 .off {
   width: 40px;
   height: 40px;
@@ -7,7 +9,7 @@
   justify-content: center;
   align-items: center;
   &:hover {
-    background-color: #568FFF;
+    background-color: $bg_hover_color;
     svg {
       path {
       fill: #FFFFFF;
@@ -23,7 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-    background-color: #2D74FF;
+    background-color: $bg_active_color;
 
     svg {
       path {

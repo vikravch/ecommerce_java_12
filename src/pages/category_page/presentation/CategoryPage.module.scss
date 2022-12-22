@@ -45,6 +45,7 @@ main {
 
 }
 
+
 //Category Info
 .categoryBlock {
   grid-area: InfoSort;
@@ -59,16 +60,21 @@ main {
 }
 
 .categoryInfo {
-  .categoryInfoPages {
+  .breadcrumbs {
     display: flex;
 
     span {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 20px;
+
       margin-right: 12px;
       color: grey;
       cursor: pointer;
     }
 
-    span:nth-child(2) {
+    span:nth-child(even) {
       cursor: default;
     }
 

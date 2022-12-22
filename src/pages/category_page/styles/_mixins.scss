@@ -1,0 +1,54 @@
+@import "variables";
+
+@mixin menu-item-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin nav-item-text {
+  @include menu-item-text;
+  font-weight: 500;
+}
+
+@mixin input-text {
+  @include nav-item-text;
+}
+
+@mixin breadcrumbs-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+@mixin price-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin sale-container {
+  @include flex-centered;
+
+  font-size: smaller;
+  font-weight: 500;
+
+  position: absolute;
+  width: 47px;
+  height: 24px;
+  left: 10px;
+  top: 10px;
+
+  background: #FA4A69;
+  border-radius: 20px;
+  color: #FFFFFF;
+}
+

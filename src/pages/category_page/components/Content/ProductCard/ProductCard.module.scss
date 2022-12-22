@@ -1,3 +1,5 @@
+@import "src/pages/category_page/styles/variables";
+
 .productCard {
   &:hover {
     transform: scale(1.1);
@@ -22,7 +24,7 @@
 
 .id {
   margin-top: 5px;
-  color: grey;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .title {
@@ -40,18 +42,20 @@
 }
 
 .sale {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 40px;
-  height: 22px;
-  border-radius: 10px;
-  background-color: #FA4A69;
-  color: #FFFFFF;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  font-weight: 500;
   font-size: smaller;
+  position: absolute;
+  width: 47px;
+  height: 24px;
+  left: 10px;
+  top: 10px;
+
+  background: $bg_sale_color;
+  border-radius: 20px;
+  color: #FFFFFF;
 }
 
 .addToCartBtn {

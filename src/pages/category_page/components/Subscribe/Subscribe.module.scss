@@ -4,9 +4,7 @@
   display: flex;
 
   @media (max-width: 767px) {
-    //height: 340px;
     height: 640px;
     flex-direction: column;
   }
-  //background-color: #568FFF;
 }

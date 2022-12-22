@@ -1,7 +1,7 @@
 .content {
   margin-left: 80px;
   grid-area: content;
-  height: 1400px;
+  height: 1410px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -13,9 +13,6 @@
     padding:0 30px 0 30px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    //overflow: scroll;
-    //scroll-behavior: smooth;
-    //scrollbar-gutter: stable;
   }
 }
 

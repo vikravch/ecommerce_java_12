@@ -1,31 +1,36 @@
 import React from "react";
 import './Sidebar.scss'
-import {Item} from "./types";
-import CheckboxTest from "../../UI/Checkbox";
+import { MenuItem } from "./types";
+import Checkbox from "../../UI/Checkbox";
 
 type MenuProps = {
-	obj: {
-	name: string;
-	icon?: string;
-	inputType?: string;
-	items: Item[];
-	}
+	menu: MenuItem,
 }
 
-const Menu: React.FC<MenuProps> = ({obj}) => {
+const Menu: React.FC<MenuProps> = ({menu}) => {
+	const [isOpen, setIsOpen] = React.useState<boolean>(true)
+	const [isActiveCategory, setIsActiveCategory] = React.useState<number>(0)
+	const [menuData, setMenuData] = React.useState<MenuItem>(menu)
 	
-	const [isOpen, setIsOpen] = React.useState(false)
+	React.useEffect(() => {
+		console.log(menuData + ' menuData')
+		console.log(menu + ' menu')
+	}, [])
+	
+	const handleChangeClass = (id: number) => {
+		setIsActiveCategory(id)
+	}
 	
 	return (
 		<div
-			key={obj.name}
-			className={`${obj.name}__block block`}>
+			key={menu.name}
+			className={`${menu.name}__block block`}>
 			
 			{/*DropDown Item*/}
 			<div
 				onClick={() => setIsOpen(prevState => !prevState)}
 				className={'dropDownItem'}>
-				<h4 className={`${obj.name}__title title`}>{obj.name}</h4>
+				<h4 className={`${menu.name}__title title`}>{menu.name}</h4>
 				<svg
 					className={isOpen ? 'up' : 'down'}
 					width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,10 +42,19 @@ const Menu: React.FC<MenuProps> = ({obj}) => {
 			
 			{/*List*/}
 			{isOpen && (
-				<div className={`${obj.name}__list list`}>
+				<div className={`${menu.name}__list list`}>
 			{/*CheckBox Containers*/}
-					{obj.items.map((category, id) => (
-						<CheckboxTest key={category} obj={obj} category={category} />
+					{menu.items.map((category, id) => (
+						<Checkbox
+							key={category.name}
+							menu={menu}
+							category={category}
+							id={id}
+							handleChangeClass={handleChangeClass}
+							isActiveCategory={isActiveCategory}
+							// setMenuData={setMenuData}
+							// menuData={menuData}
+						/>
 					))}
 				</div>
 			)

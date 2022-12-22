@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from "../../../presentation/CategoryPage.module.scss";
 
-const InfoPages: React.FC = () => {
+const Breadcrumbs: React.FC = () => {
 	return (
-		<div className={styles.categoryInfoPages}>
+		<div className={styles.breadcrumbs}>
 			<span>Men</span>
 			<span>/</span>
 			<span>T-shirts</span>
@@ -11,4 +11,4 @@ const InfoPages: React.FC = () => {
 	);
 };
 
-export default InfoPages;
+export default Breadcrumbs;

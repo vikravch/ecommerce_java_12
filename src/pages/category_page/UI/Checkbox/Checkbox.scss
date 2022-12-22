@@ -1,3 +1,4 @@
+@import "src/pages/category_page/styles/variables";
 // For Input[type=CheckboxFirst]
 label {
   font-style: normal;
@@ -8,8 +9,27 @@ label {
   cursor: pointer;
 }
 
+
+.category__label:hover {
+    text-decoration: underline;
+  }
+
+// Active
+.active__category {
+  color: $bg_active_color;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+
+
+
 label:hover::before, input[type=checkbox]:hover + label::before {
-  background-color: #568FFF;
+  background-color: $bg_hover_color;
 }
 
 input[type='checkbox'] {
@@ -22,13 +42,13 @@ label::before {
   content: '';
   width: 18px;
   height: 18px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid $border_input_color;
   border-radius: 3px;
   margin-right: 7px;
 }
 
 input[type='checkbox']:checked + label::before {
-  background-color: #2D74FF;
+  background-color: $bg_active_color;
   content: '\2713';
   color: #FFFFFF;
   display: flex;
@@ -72,27 +92,9 @@ input[type='checkbox']:checked + label::before {
 
 // For Input[type=Radio]
 
-//.styleItemLabel {
-//  font-style: normal;
-//  font-weight: 400;
-//  font-size: 16px;
-//  line-height: 18px;
-//  display: flex;
-//  cursor: pointer;
-//}
 .Style__label:hover::before, input[type='radio']:hover + .Style__label::before {
-  background-color: #568FFF;
+  background-color: $bg_hover_color;
 }
-
-//.styleCheckBox {
-//  display: flex;
-//  align-items: center;
-//  cursor: pointer;
-//
-//  &:hover {
-//    background-color: #f3f3f3;
-//  }
-//}
 
 input[type='radio'] {
   cursor: pointer;
@@ -105,7 +107,7 @@ input[type='radio'] {
   margin-right: 7px;
   width: 18px;
   height: 18px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid $border_input_color;
   border-radius: 50%;
 }
 
@@ -117,7 +119,7 @@ input[type='radio']:checked + .Style__label::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #2D74FF;
+  background-color: $bg_active_color;
 }
 
 

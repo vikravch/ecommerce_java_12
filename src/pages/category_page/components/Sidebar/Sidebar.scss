@@ -1,4 +1,8 @@
-.container__desktop {}
+@import "src/pages/category_page/styles/variables";
+
+.container__desktop {
+}
+
 aside {
   @media (max-width: 767px) {
     display: flex;
@@ -6,17 +10,42 @@ aside {
   }
 }
 
+.bg__sidebar {
+  //display: none;
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7));
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+}
+
 //.container__mobile,
+
 .sidebar__mobile {
   @media (max-width: 767px) {
     position: absolute;
     top: 0;
     left: 0;
     background-color: #FFFFFF;
-    z-index: 10;
     width: 80%;
     height: 100vh;
     overflow: scroll;
+    animation: open 0.5s ease;
+
+    @keyframes open {
+      0% {
+        transform: rotateY(90deg);
+      }
+      100% {
+        transform: rotateY(0);
+      }
+    }
+
   }
 }
 
@@ -35,7 +64,7 @@ aside {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #568FFF;
+  background-color: $bg_hover_color;
   color: #FFFFFF;
   cursor: pointer;
 
@@ -63,6 +92,7 @@ aside {
   }
 
 }
+
 // For DropDown - Item
 .dropDownItem {
   margin-top: 10px;
@@ -83,21 +113,23 @@ aside {
 
   &:hover {
     transition: color 0.15s ease-in-out;
-    color: #2D74FF;
+    color: $bg_active_color;
 
     svg {
       path {
         transition: fill 0.15s ease-in-out;
-        fill: #2D74FF;
+        fill: $bg_active_color;
       }
     }
 
   }
 }
+
 // For Blocks
 .block:nth-child(1) {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .block {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }

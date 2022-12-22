@@ -1,18 +1,20 @@
-export const menuItems = [
+import {MenuItem} from "./types";
+
+export const menuItems: MenuItem[] = [
 	{
 		name: 'Categories',
 		icon: 'categories',
 		items: [
-			'All',
-			'Coats & Jackets',
-			'T-shirts',
-			'Tops',
-			'Trousers',
-			'Jumpsuits & Rompers',
-			'Pants',
-			'Shorts',
-			'Sweaters',
-			'Shoes',
+			{name: 'All'},
+			{name: 'Coats & Jackets'},
+			{name: 'T-shirts'},
+			{name: 'Tops'},
+			{name: 'Trousers'},
+			{name: 'Jumpsuits & Rompers'},
+			{name: 'Pants'},
+			{name: 'Shorts'},
+			{name: 'Sweaters'},
+			{name: 'Shoes'},
 		]
 	},
 	{
@@ -20,11 +22,26 @@ export const menuItems = [
 		icon: 'price',
 		inputType: 'checkbox',
 		items: [
-			'Under 100$',
-			'100$ - 200$',
-			'200$ - 400$',
-			'400$ - 600$',
-			'Over 600$',
+			{
+				name: 'Under 100$',
+				isChecked: true,
+			},
+			{
+				name: '100$ - 200$',
+				isChecked: false,
+			},
+			{
+				name: '200$ - 400$',
+				isChecked: false,
+			},
+			{
+				name: '400$ - 600$',
+				isChecked: false,
+			},
+			{
+				name: 'Over 600$',
+				isChecked: false,
+			},
 		]
 	},
 	{
@@ -32,12 +49,30 @@ export const menuItems = [
 		icon: 'size',
 		inputType: 'checkbox',
 		items: [
-			'XS',
-			'S',
-			'M',
-			'L',
-			'XL',
-			'XXL',
+			{
+				name: 'XS',
+				isChecked: false,
+			},
+			{
+				name: 'S',
+				isChecked: false,
+			},
+			{
+				name: 'M',
+				isChecked: true,
+			},
+			{
+				name: 'L',
+				isChecked: false,
+			},
+			{
+				name: 'XL',
+				isChecked: false,
+			},
+			{
+				name: 'XXL',
+				isChecked: false,
+			},
 		]
 	},
 	{
@@ -45,10 +80,22 @@ export const menuItems = [
 		icon: 'collection',
 		inputType: 'checkbox',
 		items: [
-			'One',
-			'Two',
-			'Three',
-			'Four',
+			{
+				name: 'One',
+				isChecked: false,
+			},
+			{
+				name: 'Two',
+				isChecked: false,
+			},
+			{
+				name: 'Three',
+				isChecked: false,
+			},
+			{
+				name: 'Four',
+				isChecked: true,
+			},
 		]
 	},
 	{
@@ -56,11 +103,26 @@ export const menuItems = [
 		icon: 'brand',
 		inputType: 'checkbox',
 		items: [
-			"Levi's",
-			"Jungmaven",
-			"Sunspel",
-			"Uniqlo",
-			"Aime Leon Dore",
+			{
+				name: "Levi's",
+				isChecked: true,
+			},
+			{
+				name: "Jungmaven",
+				isChecked: false,
+			},
+			{
+				name: "Sunspel",
+				isChecked: false,
+			},
+			{
+				name: "Uniqlo",
+				isChecked: false,
+			},
+			{
+				name: "Aime Leon Dore",
+				isChecked: true,
+			},
 		]
 	},
 	{
@@ -68,9 +130,18 @@ export const menuItems = [
 		icon: 'style',
 		inputType: 'radio',
 		items: [
-			"All styles",
-			"A-Line",
-			"Graphic T-Shirts",
+			{
+				name: "All styles",
+				isChecked: true,
+			},
+			{
+				name: "A-Line",
+				isChecked: false,
+			},
+			{
+				name: "Graphic T-Shirts",
+				isChecked: false,
+			},
 		]
 	},
 	{
@@ -78,10 +149,22 @@ export const menuItems = [
 		icon: 'season',
 		inputType: 'checkbox',
 		items: [
-			'Spring',
-			'Summer',
-			'Fall',
-			'Winter',
+			{
+				name: 'Spring',
+				isChecked: false,
+			},
+			{
+				name: 'Summer',
+				isChecked: true,
+			},
+			{
+				name: 'Fall',
+				isChecked: true,
+			},
+			{
+				name: 'Winter',
+				isChecked: false,
+			},
 		]
 	}
 ]

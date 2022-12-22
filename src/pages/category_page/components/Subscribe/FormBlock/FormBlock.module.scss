@@ -1,7 +1,9 @@
+@import "src/pages/category_page/styles/variables";
+
 .root {
   width: 50%;
   height: 100%;
-  background-color: #2D74FF;
+  background-color: $bg_active_color;
   padding: 91px 46px 91px 155px;
 
   display: flex;
@@ -47,7 +49,6 @@
   @media (max-width: 767px) {
    flex-direction: column;
     margin-top: 20px;
-    //padding: 10px 0 10px 0;
     align-items: center;
     row-gap: 10px;
   }
