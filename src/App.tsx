@@ -1,15 +1,13 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
-
-
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer"
-import Promo from "./components/Promo";
 import Subscribe from "./components/Subscribe";
 import Categories from "./components/Categories";
 import Orders from "./components/Orders";
+import Carousel from "./components/Carousel";
 
 
 const App = () => {
@@ -58,7 +56,7 @@ const App = () => {
             <Route path={'/'} element={
                 <div className={'main'}>
                 <Header changetheme={stylesBlack}/>
-                <Promo/>
+                <Carousel/>
                 <Main/>
                 <Categories/>
                 <Subscribe/>

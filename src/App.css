@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 100vw;
-    min-height: 100vh;
-}
 
 /*-------------------------------------------- Mobile break-point------------------------------------------------*/
 
@@ -86,14 +82,6 @@ body {
         letter-spacing: -4.5px;
 
         color: rgba(238, 237, 240, 0.1);
-    }
-
-    .search {
-        border: 1px solid white;
-        background: white url("/src/assets/Inputs/Glass.png") no-repeat center left 5px;
-        padding-left: 25px;
-        font-weight: 400;
-        flex-grow: 1;
     }
 
 
@@ -236,19 +224,20 @@ body {
 
 
     .searchWhite {
-        height: 25px;
-        border: 1px solid white;
-        background: black url("/src/assets/Inputs/seachIcon.svg") no-repeat center left 5px;
+        height: 30px;
+        border: 1px solid grey;
+        background: white url("/src/assets/Inputs/seachIconBlack.svg") no-repeat center left 5px;
         border-radius: 8px;
-        color: white;
+        color: black;
         padding-left: 25px;
         font-weight: 400
     }
 
+
     .search {
         height: 30px;
         border: 1px solid white;
-        background: black url("/src/assets/Inputs/seachIconBlack.svg") no-repeat center left 5px;
+        background: black url("/src/assets/Inputs/seachIcon.svg") no-repeat center left 5px;
         border-radius: 8px;
         color: white;
         padding-left: 25px;
@@ -259,6 +248,10 @@ body {
         display: flex;
         height: 570px;
         background-color: #17181F;
+    }
+
+    .hoverarrow:hover{
+        background-color: #282828;
     }
 
     .tittle {
@@ -349,11 +342,6 @@ body {
         letter-spacing: -1.2px;
     }
 
-    .sub {
-        position: relative;
-        display: flex;
-    }
-
     .letter {
         font-family: 'Inter';
         font-style: normal;
@@ -388,7 +376,10 @@ body {
     .inputMail {
         width: 50%;
         margin-right: 1vw;
+        padding-left: 30px;
         border-radius: 10px;
+        background: white url("/src/assets/Inputs/mailIcon.svg") no-repeat center left 5px;
+
     }
 
     .fmenu{
