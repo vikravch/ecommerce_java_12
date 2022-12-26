@@ -15,7 +15,6 @@ import {signUpAction} from "../store/actions/signUpAction";
 export const SignUp = () => {
     const dispatch = useAppDispatch();
     const {errorSlice, isLoading, registrationResponse} = useAppSelector(state => state.signUp)
-
     const methods = useForm<IFormData>({resolver: yupResolver(schemaSignUp)});
     const onSubmit = (data: IFormData) => {
         dispatch(signUpAction({

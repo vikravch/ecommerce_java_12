@@ -15,7 +15,6 @@ createServer({
             return user == userReg ? attrs.loginData : attrs.errors
         })
 
-
         this.post("/api/signUp", (schema, request) => {
             let attrs = JSON.parse(request.requestBody)
             attrs.errors = {error: "You have successfully registered!"}

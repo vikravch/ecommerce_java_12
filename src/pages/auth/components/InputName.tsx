@@ -2,7 +2,7 @@ import React from 'react';
 import style from "../presentation/Loginization.module.css";
 import {Controller, useFormContext} from "react-hook-form";
 
-const InputName = () => {
+const InputName:React.FC = () => {
     const {
         control,
         formState: {errors}

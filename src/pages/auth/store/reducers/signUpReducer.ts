@@ -2,7 +2,6 @@ import {IAuthResponse} from "../../models/IAuthResponse";
 import {createSlice} from "@reduxjs/toolkit";
 import {signUpAction} from "../actions/signUpAction";
 
-
 type registrationState = {
     registrationResponse: IAuthResponse,
     isLoading: boolean,

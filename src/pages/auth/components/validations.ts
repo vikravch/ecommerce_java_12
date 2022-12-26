@@ -13,7 +13,6 @@ export const schemaSignUp = yup.object({
         .max(30, "Too long")
         .oneOf([yup.ref('password')], 'Passwords do not match')
         .min(6, "Too short")
-       
 })
 
 export const schemaSignIn = yup.object({
@@ -22,13 +21,11 @@ export const schemaSignIn = yup.object({
         .string().required('Enter your password')
         .max(30, "Too long")
         .min(6, "Too short")
-
-
 })
 
 export const schemaRestorePassword = yup.object({
     email: yup.string().required('Enter your email').email('This is not email'),
-   })
+})
 
 //optional() - может не быть поля
 

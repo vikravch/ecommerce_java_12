@@ -11,17 +11,11 @@ import {signInAction} from "../store/actions/signInAction";
 
 
 export const SignIn = () => {
-    // console.log(localStorage.getItem('token'))
     const dispatch = useAppDispatch();
     const {loginResponse, isLoading, errorSlice} = useAppSelector(state => state.signIn)
-    // useEffect(()=>{
-    //     dispatch(signInAction())
-    // },[])
-
-    console.log(loginResponse)
     const methods = useForm<IFormData>({resolver: yupResolver(schemaSignIn)});
     const onSubmit = (data: IFormData) => {
-        dispatch(signInAction({email:data.email, password:data.password}))
+        dispatch(signInAction({email: data.email, password: data.password}))
 
     };
     if (localStorage.getItem('token')) {

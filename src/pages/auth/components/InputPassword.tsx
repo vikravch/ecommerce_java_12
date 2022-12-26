@@ -3,8 +3,7 @@ import style from "../presentation/Loginization.module.css";
 import {Controller, useFormContext} from "react-hook-form";
 import {FiEye, FiEyeOff} from "react-icons/fi";
 
-
-const InputPassword = () => {
+const InputPassword:React.FC = () => {
     const [show, setShow] = useState(false)
     const {
         control,
