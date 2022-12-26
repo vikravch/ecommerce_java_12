@@ -8,6 +8,12 @@ import Subscribe from "./components/Subscribe";
 import Categories from "./components/Categories";
 import Orders from "./components/Orders";
 import Carousel from "./components/Carousel";
+// @ts-ignore
+import zoomx from "./assets/zoomx.png";
+// @ts-ignore
+import shoes1 from "./assets/shoes1.png";
+// @ts-ignore
+import shoes2 from "./assets/shoes2.png";
 
 
 const App = () => {
@@ -56,7 +62,11 @@ const App = () => {
             <Route path={'/'} element={
                 <div className={'main'}>
                 <Header changetheme={stylesBlack}/>
-                <Carousel/>
+                <Carousel>
+                    <img alt={'zoom'} style={{animationName: 'appear'}} className={'imgStyle'} src={zoomx}/>
+                    <img alt={'shoes1'} style={{animationName: 'appear1'}} className={'imgStyle'} src={shoes1}/>
+                    <img alt={'shoes2'} style={{animationName: 'appear2'}} className={'imgStyle'} src={shoes2}/>
+                </Carousel>
                 <Main/>
                 <Categories/>
                 <Subscribe/>

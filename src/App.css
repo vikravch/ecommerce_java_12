@@ -85,6 +85,7 @@
     }
 
 
+
     .arrival {
         width: 200px;
         height: 44px;
@@ -293,6 +294,42 @@
         letter-spacing: -4.5px;
 
         color: rgba(238, 237, 240, 0.1);
+    }
+
+    .imgStyle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        animation-duration: 1s;
+    }
+
+    @keyframes appear {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    @keyframes appear1 {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    @keyframes appear2 {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
     }
 
     .main {
