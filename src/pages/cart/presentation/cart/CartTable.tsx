@@ -14,7 +14,7 @@ export const CartTable = (props:Props) => {
 //     )
     return (
 
-        <div>
+        <div >
 
             <table className="table " key={props.product.id}>
                 <tbody>

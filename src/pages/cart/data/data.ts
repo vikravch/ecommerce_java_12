@@ -1,7 +1,8 @@
 import img from '../img/Purple.png'
 import img1 from '../img/BlackWithPrint.png'
+import {ItemsInfo} from "../types";
 
-export const defaultItems = [
+export const defaultItems: ItemsInfo[] = [
     {
         id: '#7142',
         img: img,
@@ -14,7 +15,7 @@ export const defaultItems = [
         id: '#7114',
         img: img1,
         name: ['Basic t-shirt', 'Purple'],
-        price: '55',
+        price: 55,
         size: 'L/14 US',
         quantity: 1
     }

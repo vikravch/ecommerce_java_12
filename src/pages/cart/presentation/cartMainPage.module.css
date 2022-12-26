@@ -13,7 +13,7 @@
 
     margin-top: 30px;
     display: flex;
-    align-items: center;
+
     letter-spacing: -0.3px;
 
 
@@ -36,12 +36,11 @@
 
     margin-top: 30px;
     display: flex;
-    align-items: center;
+
     letter-spacing: -0.3px;
 
 
     color: #000000;
-
 
 
     flex: none;

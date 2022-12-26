@@ -19,16 +19,20 @@ export const CartMainPage: React.FC = (props) => {
         <div className={s.general}>
 
             <div className='container'>
+
                 <ul className='nav'>
                     <li className='nav-item'>
                         <a className='nav-link' href='http://localhost:3000'><span className={s.linkMain}>Main /</span></a>
                     </li>
                     <li className='nav-item'>
-                        <a className='nav-link' href='http://localhost:3000/cart'><span className={s.linkWishlist}> Wishlist</span></a>
+                        <a className='nav-link' href='http://localhost:3000/cart'><span className={s.linkWishlist}>Cart </span></a>
                     </li>
+
                 </ul>
+
+                <h1 className={s.titleCart}>Cart</h1>
                 <div className='row'>
-                    <h1 className={s.titleCart}>Cart</h1>
+
                     <div className='col  '>
 
                         {products}
