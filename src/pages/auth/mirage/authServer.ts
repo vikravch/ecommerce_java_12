@@ -1,12 +1,10 @@
-// @ts-ignore
-
 import {createServer} from "miragejs"
 
 createServer({
     routes() {
-        // @ts-ignore
-        this.post("/api/login", (schema, request) => {
+        this.post("/api/signIn", (schema, request) => {
             let attrs = JSON.parse(request.requestBody)
+            console.log(attrs);
             const user = attrs.email + attrs.password
             const userReg = 'qqq@qqq.qq1234567'
             attrs.loginData = {
@@ -18,7 +16,7 @@ createServer({
         })
 
 
-        this.post("/api/registration", (schema, request) => {
+        this.post("/api/signUp", (schema, request) => {
             let attrs = JSON.parse(request.requestBody)
             attrs.errors = {error: "You have successfully registered!"}
             return attrs.errors;

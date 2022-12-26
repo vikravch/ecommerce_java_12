@@ -1,15 +1,13 @@
 import {combineReducers} from "redux";
-// @ts-ignore
-import {composeWithDevTools} from "redux-devtools-extension";
-import authReducer from "../../pages/auth/store/reducers/authReducer";
+import signInReducer from "../../pages/auth/store/reducers/signInReducer";
 import {configureStore} from "@reduxjs/toolkit";
-import regReducer from "../../pages/auth/store/reducers/regReducer";
+import signUpReducer from "../../pages/auth/store/reducers/signUpReducer";
 import restorePasswordReducer from "../../pages/auth/store/reducers/restorePasswordReducer";
 
 //List of reducers!!!
 const rootReducer = combineReducers({
-    auth: authReducer,
-    registration: regReducer,
+    signIn: signInReducer,
+    signUp: signUpReducer,
     restorePassword: restorePasswordReducer,
     // landingPage
     // profile

@@ -4,22 +4,23 @@ import {Link} from "react-router-dom";
 import InputEmail from "../components/InputEmail";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaRestorePassword} from "../components/validations";
-import {IFormData} from "../models/formData";
+import {IFormData} from "../models/IFormData";
 import {useAppDispatch, useAppSelector} from "../../../general/hooks/redux";
 import React from "react";
-import {restorePasswordCreator} from "../store/actionCreators/restorePasswordCreator";
+import {restorePasswordAction} from "../store/actions/restorePasswordAction";
 
 export const RestorePassword = () => {
     const dispatch = useAppDispatch();
-    const{error, isLoading} = useAppSelector(state => state.restorePassword)
+    const{restorePasswordResponse, isLoading, errorSlice} = useAppSelector(state => state.restorePassword)
     const methods = useForm<IFormData>({resolver: yupResolver(schemaRestorePassword)});
     const onSubmit = (data: IFormData) => {
-        dispatch(restorePasswordCreator(data.email))
+        dispatch(restorePasswordAction({email: data.email}));
     }
     return (
         <div className={style.wrapperLogin}>
             {isLoading && <h1>LOADING..............</h1>}
-            {error && <h1>{error}</h1>}
+            {errorSlice && <h1>{errorSlice}</h1>}
+            {restorePasswordResponse.error && <h1>{restorePasswordResponse.error}</h1>}
             <div className={style.titleContainer}>
                 <div className={style.title1}>
                     <p>Restore password</p>

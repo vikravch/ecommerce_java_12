@@ -1,22 +1,21 @@
 import {AxiosResponse} from "axios"
-import {AuthResponse} from "../models/AuthResponse";
+import {IAuthResponse} from "../models/IAuthResponse";
 import instance from "../http/api";
-import {RestorePassword} from "../presentation/RestorePassword";
 
 
 export const authAPI = {
-    login(email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
+    signIn(email: string, password: string | undefined): Promise<AxiosResponse<IAuthResponse>> {
         //1 параметр адрес эндпоинта второй параметр - тело запроса
-        return instance.post<AuthResponse>('/login', {email, password})
+        return instance.post<IAuthResponse>('/signIn', {email, password})
     },
 
-    registration(name: string, email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
+    signUp(name: string | undefined, email: string, password: string | undefined): Promise<AxiosResponse<IAuthResponse>> {
         //1 параметр адрес эндпоинта второй параметр - тело запроса
-        return instance.post<AuthResponse>('/registration', {name, email, password})
+        return instance.post<IAuthResponse>('/signUp', {name, email, password})
     },
-    restorePassword(email: string): Promise<AxiosResponse<AuthResponse>> {
+    restorePassword(email: string): Promise<AxiosResponse<IAuthResponse>> {
         //1 параметр адрес эндпоинта второй параметр - тело запроса
-        return instance.post<AuthResponse>('/restorePassword', {email})
+        return instance.post<IAuthResponse>('/restorePassword', {email})
     },
 
 //     logout(): Promise<void> {

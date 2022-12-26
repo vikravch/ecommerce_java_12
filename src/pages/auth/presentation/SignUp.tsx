@@ -8,24 +8,27 @@ import InputEmail from "../components/InputEmail";
 import React from "react";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaSignUp} from "../components/validations";
-import {IFormData} from "../models/formData";
+import {IFormData} from "../models/IFormData";
 import {useAppDispatch, useAppSelector} from "../../../general/hooks/redux";
-import {registrationCreator} from "../store/actionCreators/regCreator";
-
+import {signUpAction} from "../store/actions/signUpAction";
 
 export const SignUp = () => {
     const dispatch = useAppDispatch();
-    const {error, isLoading} = useAppSelector(state => state.registration)
+    const {errorSlice, isLoading, registrationResponse} = useAppSelector(state => state.signUp)
 
     const methods = useForm<IFormData>({resolver: yupResolver(schemaSignUp)});
     const onSubmit = (data: IFormData) => {
-        // @ts-ignore
-        dispatch(registrationCreator(data.name,data.email, data.password, ))
+        dispatch(signUpAction({
+            name: data.name,
+            email: data.email,
+            password: data.password
+        }))
     };
     return (
         <div className={style.wrapperLogin}>
             {isLoading && <h1>LOADING..............</h1>}
-            {error && <h1>{error}</h1>}
+            {errorSlice && <h1>{errorSlice}</h1>}
+            {registrationResponse.error && <h4>{registrationResponse.error}</h4>}
             <div className={style.titleContainer}>
                 <div className={style.title1}>
                     <p>Sign Up</p>

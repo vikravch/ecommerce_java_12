@@ -1,29 +1,36 @@
-import {authAPI} from "../../services/AuthService";
-import {AuthResponse} from "../../models/AuthResponse";
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {IAuthResponse} from "../../models/IAuthResponse";
+import {createSlice} from "@reduxjs/toolkit";
+import {restorePasswordAction} from "../actions/restorePasswordAction";
 
-
-let initialState: AuthResponse = {
-    id: null,
+type restorePasswordState = {
+    restorePasswordResponse: IAuthResponse,
+    isLoading: boolean,
+    errorSlice: string | null | undefined
+}
+const initialState: restorePasswordState = {
+    restorePasswordResponse: {error: undefined},
     isLoading: false,
-    error: ''
+    errorSlice: ''
 }
 
 export const restorePasswordSlice = createSlice({
     name: 'restorePassword',
     initialState,
-    reducers: {
-        restorePasswordFetching(state) {
-            state.isLoading = true;
-        },
-        restorePasswordFetchingSuccess(state, action: PayloadAction<string>) {
-            state.isLoading = false;
-            state.error = action.payload;
-        },
-        restorePasswordFetchingError(state, action: PayloadAction<string>) {
-            state.isLoading = false;
-            state.error = action.payload;
-        },
+    reducers: {},
+    extraReducers: (builder) => {
+        builder
+            .addCase(restorePasswordAction.pending, (state) => {
+                state.isLoading = true;
+                state.errorSlice = null;
+            })
+            .addCase(restorePasswordAction.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.restorePasswordResponse = action.payload;
+            })
+            .addCase(restorePasswordAction.rejected, (state, action) => {
+                state.isLoading = false;
+                state.errorSlice = action.payload;
+            })
     }
 })
 

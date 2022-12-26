@@ -5,40 +5,35 @@ import InputEmail from "../components/InputEmail";
 import InputPassword from "../components/InputPassword";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {schemaSignIn} from "../components/validations";
-import {IFormData} from "../models/formData";
+import {IFormData} from "../models/IFormData";
 import {useAppDispatch, useAppSelector} from "../../../general/hooks/redux";
-import {useEffect} from "react";
-import {loginCreator} from "../store/actionCreators/loginCreator";
+import {signInAction} from "../store/actions/signInAction";
+
 
 export const SignIn = () => {
     // console.log(localStorage.getItem('token'))
     const dispatch = useAppDispatch();
-    const {accessToken, isLoading, error} = useAppSelector(state => state.auth)
+    const {loginResponse, isLoading, errorSlice} = useAppSelector(state => state.signIn)
     // useEffect(()=>{
-    //     dispatch(loginCreator())
+    //     dispatch(signInAction())
     // },[])
 
+    console.log(loginResponse)
     const methods = useForm<IFormData>({resolver: yupResolver(schemaSignIn)});
-
     const onSubmit = (data: IFormData) => {
+        dispatch(signInAction({email:data.email, password:data.password}))
 
-        // @ts-ignore
-        dispatch(loginCreator(data.email, data.password))
-        console.log(data.email)
     };
     if (localStorage.getItem('token')) {
         console.log('redirect profile')
     } else {
         console.log('redirect SIGNUP')
     }
-    // @ts-ignore
-    // @ts-ignore
-    // @ts-ignore
-    // @ts-ignore
+
     return (
         <div className={style.wrapperLogin}>
             {isLoading && <h1>LOADING..............</h1>}
-            {error && <h1>{error}</h1>}
+            {errorSlice && <h1>{errorSlice}</h1>}
             <div className={style.titleContainer}>
                 <div className={style.title1}>
                     <p>Sign In</p>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import style from "../presentation/Loginization.module.css";
-import {Controller, Field, useForm, useFormContext} from "react-hook-form";
+import {Controller, useFormContext} from "react-hook-form";
 import {FiEye, FiEyeOff} from "react-icons/fi";
 
 
