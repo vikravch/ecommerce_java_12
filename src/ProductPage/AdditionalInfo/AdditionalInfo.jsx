@@ -8,13 +8,13 @@ const AdditionalInfo = () => {
             <div className="accordion accordion-flush">
                 <div className="accordion-item ">
                     <h2 className="accordion-header" id="flush-headingOne">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded='false'
+                        <button className="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded='true'
                                 aria-controls="flush-collapseOne">
                             Details
                         </button>
                     </h2>
-                    <div id="flush-collapseOne" className="accordion-collapse collapse"
+                    <div id="flush-collapseOne" className="accordion-collapse collapse show"
                          aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <div className="accordion-body">Standard fit for a relaxed, easy feel<br/> Fabric: 100%
                             cotton<br/> Machine wash<br/> Imported<br/> Shown: Cactus Flower<br/> Style: CU8914-564

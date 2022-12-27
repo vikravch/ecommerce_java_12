@@ -2,61 +2,27 @@
   width: 100%;
   display: grid;
   justify-content: center;
-}
 
-.wrapper {
-  width: 1290px;
-  display: grid;
-  gap: 5px;
-  grid-template-columns: 1fr 1fr 360px;
-  grid-template-rows: 80px 634px 634px;
-  justify-content: center;
-  box-sizing: border-box;
-
-  .breadcrumbs {
+  .wrapper {
+    width: 1290px;
     display: grid;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    align-items: center;
-  }
+    gap: 5px;
+    grid-template-columns: 422.5px 422.5px 360px;
+    grid-template-rows: 80px 634px 634px;
+    box-sizing: border-box;
 
-  img {
-    width: 457px;
-    height: 632px;
-  }
-
-  .rightSidebar {
-    grid-column-start: 3;
-    grid-row-start: 2;
-    grid-row-end: span 2;
-    padding-left: 75px;
-  }
-}
-
-.galleryWrapper {
-  display: grid;
-  grid-template-rows: 35px 925px;
-  background-image: url("./Photos/bigImg/image 4.svg");
-
-  .content{
-    display: grid;
-    grid-template-columns: 70px 610px 70px;
-    .prevButRow{
+    .breadcrumbs {
       display: grid;
-      justify-items: center;
+      grid-column-start: 1;
+      grid-column-end: 4;
       align-items: center;
     }
-    .nextButRow{
-      display: grid;
-      align-items: center;
-      justify-items: center;
-    }
-  }
-  .closeButWrapper{
-    display:grid;
-    justify-items: end;
-    .closeBut{
-      margin: 15px;
+
+    .rightSidebar {
+      grid-column-start: 3;
+      grid-row-start: 2;
+      grid-row-end: span 2;
+      margin-left: 75px;
     }
   }
 }

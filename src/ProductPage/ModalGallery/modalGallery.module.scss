@@ -1,0 +1,33 @@
+.galleryWrapper {
+  display: grid;
+  grid-template-rows: 35px 925px;
+  background-image: url("../Photos/bigImg/image 4.svg");
+
+  .content {
+    display: grid;
+    grid-template-columns: 70px 610px 70px;
+
+    .prevButRow {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .nextButRow {
+      display: grid;
+      align-items: center;
+      justify-items: center;
+    }
+  }
+
+  .closeButWrapper {
+    display: grid;
+    justify-items: end;
+
+    .closeBut {
+      margin: 15px;
+      z-index: 1;
+    }
+
+  }
+}

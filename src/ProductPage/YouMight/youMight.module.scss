@@ -1,0 +1,140 @@
+.mightAlso {
+  display: grid;
+  grid-template-columns: 1290px;
+  grid-template-rows: 144px 466px 134px;
+  grid-template-areas:
+    "alsoTitle"
+    "cards"
+    "pagination";
+
+  .alsoTitle {
+    grid-area: alsoTitle;
+  }
+
+  .cards {
+    grid-area: cards;
+  }
+
+  .pagination {
+    grid-area: pagination;
+  }
+  img{
+    width: 300px;
+    height: 365px;
+  }
+
+  .alsoTitle {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+
+    letter-spacing: -1.2px;
+    margin-top: 50px;
+
+    /* Base / Black */
+
+    color: #000000;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    gap: 30px;
+
+    .frameWrapper {
+      .rates {
+        width: 132px;
+        height: 31px;
+        margin-top: 4px;
+      }
+
+      .hashTag {
+        width: 45px;
+        height: 18px;
+        /* Caption / 3 / Regular */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        /* identical to box height, or 112% */
+
+        letter-spacing: -0.5px;
+
+        /* Grey / Dark / 4 */
+
+        color: rgba(0, 0, 0, 0.6);
+
+        /* Inside auto layout */
+      }
+
+      .namePrice {
+        display: flex;
+        width: 300px;
+        height: 40px;
+        margin-top: 4px;
+        justify-content: space-between;
+
+
+        .name {
+          /* Caption / 3 / Medium */
+          margin-top: 4px;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 18px;
+          /* or 112% */
+
+          letter-spacing: -0.5px;
+
+          /* Base / Black */
+
+          color: #000000;
+        }
+
+        .price {
+          width: 37px;
+          height: 24px;
+
+          /* Caption / 1 / Medium */
+
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+          /* identical to box height, or 120% */
+
+          text-align: right;
+          letter-spacing: -0.6px;
+
+          /* Base / Black */
+
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  .pagination {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 134px;
+
+  }
+}
+.line {
+  width: 1290px;
+  margin-top: 77.5px;
+  margin-bottom: 0;
+}
