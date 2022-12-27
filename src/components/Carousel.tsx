@@ -40,10 +40,16 @@ const Carousel: React.FC<React.PropsWithChildren> = ({children}) => {
                  style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around', width: '10vw'}}>
                 <Arrowleft/>
             </div>
-            <div style={{flexGrow: '1', position: 'relative', alignItems: 'center'}}>
+            <div style={{flexGrow: '1', position: 'relative', alignItems: 'center', overflow: 'hidden'}}>
+                <div className={'fromtop'}>
+                    <div style={{position:"relative"}}>
                 <h1 className={'tittle'}>AIR Beyond Compare</h1>
                 <h1 className={'tittleSmall'}>Explore the best Air Max for fall & beyond</h1>
+                    </div>
+                </div>
+                <div className={'animPromo'}>
                 <h1 className={'nike'}>NIKE</h1>
+                </div>
                 <div className={'appearance'}>
                 {slidesArray[count]}
                 </div>

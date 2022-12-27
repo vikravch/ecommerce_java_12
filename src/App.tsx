@@ -22,7 +22,7 @@ const App = () => {
             theme:
             {
                 color: 'white',
-                backgroundColor: 'black'
+                backgroundColor: '#17181F'
             },
             onhover: 'hover_black',
             search: {backgroundColor: 'black', color: 'white'},

@@ -71,6 +71,7 @@
 
 
     .nike {
+        position: absolute;
         margin: 0;
         font-family: 'Inter', sans-serif;
         font-style: normal;
@@ -83,7 +84,6 @@
 
         color: rgba(238, 237, 240, 0.1);
     }
-
 
 
     .arrival {
@@ -210,6 +210,7 @@
 
     li:hover {
         color:#FFFFFF;
+        cursor: pointer;
     }
 
     .hover_black:hover{
@@ -251,34 +252,129 @@
         background-color: #17181F;
     }
 
+    .slideDown{
+        padding: 20px 0px 20px 50px;
+        position: absolute;
+        display: flex;
+        flexWrap: wrap;
+        list-style: none;
+        z-index: 1;
+        width: 100%;
+        border-bottom: 1px solid grey;
+        opacity: 1;
+    }
+
+    .slideDown ul{
+        list-style: none;
+        padding: 0;
+    }
+
+    .slideDown li{
+        padding: 0;
+    }
+
+    .categoryList{
+        margin-left: 3vw;
+    }
+
+    .categoryList li:hover{
+        color: black;
+    }
+
+    .categoryWhiteList{
+        margin-left: 3vw;
+    }
+
+    .categoryWhiteList:hover{
+        color: white
+    }
+
+
     .hoverarrow:hover{
         background-color: #282828;
     }
 
+    .fromtop{
+        overflow: hidden;
+        display: flex;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        position: absolute;
+        animation-name: lozung;
+        animation-duration: 2s;
+    }
+
+    @keyframes lozung {
+        0%
+        {
+            top: -100%;
+        }
+        100%
+        {
+            top: 0;
+        }
+    }
+
     .tittle {
-        margin: auto;
         font-family: 'Inter', sans-serif;
         font-style: normal;
-        font-size: 72px;
-        line-height: 80px;
+        font-size: 60px;
         text-align: center;
         letter-spacing: -4.5px;
         color: rgba(238, 237, 240, 0.85);
     }
 
     .tittleSmall {
+        position: inherit;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        text-align: center;
         font-family: 'Inter', sans-serif;
         font-style: normal;
         font-size: 24px;
         line-height: 30px;
         /* identical to box height, or 125% */
 
-        text-align: center;
         letter-spacing: -1px;
 
         color: #EEEDF0;
 
         text-shadow: 0 5px 12px rgba(203, 105, 193, 0.25);
+        animation-name: up;
+        animation-duration: 3s;
+    }
+
+    @keyframes up {
+        0%
+        {
+            top: 100%;
+        }
+        100%
+        {
+            top: 50%;
+        }
+    }
+
+    .animPromo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-name: up;
+        animation-duration: 2s;
+    }
+
+    @keyframes fromtop {
+        0%
+        {
+            top: 100%;
+
+        }
+        100%
+        {
+            top: 50%;
+
+        }
     }
 
 
@@ -288,12 +384,25 @@
         font-style: normal;
         font-size: 30vw;
         line-height: 300px;
-        /* identical to box height, or 16% */
-
         text-align: center;
         letter-spacing: -4.5px;
-
         color: rgba(238, 237, 240, 0.1);
+        animation-name: fromtop;
+        animation-duration: 3s;
+
+    }
+
+    @keyframes fromtop {
+        0%
+        {
+            top: 100%;
+            transform: rotate3d(1,0,0, 90deg);
+        }
+        100%
+        {
+            top: 50%;
+            transform: rotate3d(1,0,0, 0deg);
+        }
     }
 
     .imgStyle{
@@ -302,7 +411,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 50%;
-        animation-duration: 1s;
+        animation-duration: 3s;
     }
 
     @keyframes appear {

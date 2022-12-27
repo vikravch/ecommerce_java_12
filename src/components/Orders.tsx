@@ -55,10 +55,10 @@ const Orders = () => {
                             All
                         </option>
                         <option>
-                            T-shirts
+                            by date
                         </option>
                         <option>
-                            Jackets
+                            by status
                         </option>
                     </select>
                             </div>
