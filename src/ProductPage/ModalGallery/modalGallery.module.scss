@@ -1,7 +1,7 @@
+
 .galleryWrapper {
   display: grid;
   grid-template-rows: 35px 925px;
-  background-image: url("../Photos/bigImg/image 4.svg");
 
   .content {
     display: grid;
@@ -11,12 +11,24 @@
       display: grid;
       justify-items: center;
       align-items: center;
+      cursor: pointer;
+
+      svg>path:hover{
+        fill: black;
+        fill-opacity: 0.6;
+      }
     }
 
     .nextButRow {
       display: grid;
       align-items: center;
       justify-items: center;
+      cursor: pointer;
+
+      svg>path:hover{
+        fill: black;
+        fill-opacity: 0.6;
+      }
     }
   }
 

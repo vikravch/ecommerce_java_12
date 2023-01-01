@@ -10,9 +10,9 @@ const MainPhotos = () => {
     return (
         <>
             <img type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" src={img1} alt={'text'}/>
-            <img src={img2} alt={'text'}/>
-            <img src={img3} alt={'text'}/>
-            <img src={img4} alt={'text'}/>
+            <img type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" src={img2} alt={'text'}/>
+            <img type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" src={img3} alt={'text'}/>
+            <img type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" src={img4} alt={'text'}/>
             <ModalGallery/>
         </>
     )

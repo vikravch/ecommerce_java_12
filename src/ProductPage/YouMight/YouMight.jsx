@@ -54,7 +54,7 @@ const YouMight = () => {
                 <div className={styles.pagination}>
                     <ul className="pagination pagination-lg">
                         <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Previous">
+                            <a className="page-link" aria-label="Previous">
                                 <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -63,13 +63,13 @@ const YouMight = () => {
                                 </svg>
                             </a>
                         </li>
-                        <li className="page-item"><a className="page-link" href="#">1</a></li>
-                        <li className="page-item"><a className="page-link" href="#">2</a></li>
-                        <li className="page-item"><a className="page-link" href="#">3</a></li>
-                        <li className="page-item"><a className="page-link" href="#">...</a></li>
-                        <li className="page-item"><a className="page-link" href="#">20</a></li>
+                        <li className="page-item"><a className="page-link" >1</a></li>
+                        <li className="page-item"><a className="page-link" >2</a></li>
+                        <li className="page-item"><a className="page-link">3</a></li>
+                        <li className="page-item"><a className="page-link" >...</a></li>
+                        <li className="page-item"><a className="page-link" >20</a></li>
                         <li className="page-item">
-                            <a className="page-link" href="#" aria-label="Next">
+                            <a className="page-link" aria-label="Next">
                                 <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path

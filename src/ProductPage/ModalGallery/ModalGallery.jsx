@@ -1,14 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styles from './modalGallery.module.scss'
 
+import image1 from '../Photos/bigImg/1.png'
+import image2 from '../Photos/bigImg/2.png'
+import image3 from '../Photos/bigImg/3.png'
+import image4 from '../Photos/bigImg/4.png'
+
 const ModalGallery = () => {
-    const images = ['image 4','image 3','image 2','image 1'];
+    const images = [image1,image2,image3,image4];
 
-    const nextButGallery = () => {
+    const [currentIndex, setCurrentIndex] = useState(0)
 
+    const goToPrevious = (e) => {
+        e.preventDefault()
+        const isFirstSlide = currentIndex === 0
+        const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1
+        setCurrentIndex(newIndex)
     }
-    const prevButGallery = () => {
+    const goToNext = (e) => {
+        e.preventDefault()
+        const isLastSlide = currentIndex === images.length -1
+        const newIndex = isLastSlide ? 0 : currentIndex + 1
+        setCurrentIndex(newIndex)
+    }
 
+    const backgroundImg = {
+        backgroundImage: `url(${images[currentIndex]})`
     }
     return (
         <>
@@ -17,15 +34,15 @@ const ModalGallery = () => {
                  aria-hidden="true">
                 <div className="modal-dialog modal-lg">
                     <div className="modal-content" style={{width: '750px', height: '960px', padding: 0}}>
-                        <div className={styles.galleryWrapper}>
+                        <div className={styles.galleryWrapper} style={backgroundImg}>
                             <div className={styles.closeButWrapper}>
                                 <div className={styles.closeBut}>
                                     <button type="button" className="btn-close" data-bs-dismiss="modal"
                                             aria-label="Закрыть"></button>
                                 </div>
                             </div>
-                            <div className={styles.content}>
-                                <div className={styles.prevButRow}>
+                            <div className={styles.content} >
+                                <div className={styles.prevButRow} onClick={goToPrevious}>
                                     <svg width="18" height="28" viewBox="0 0 18 28" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -34,12 +51,12 @@ const ModalGallery = () => {
                                     </svg>
                                 </div>
                                 <div></div>
-                                <div className={styles.nextButRow}>
+                                <div className={styles.nextButRow} onClick={goToNext}>
                                     <svg width="18" height="28" viewBox="0 0 18 28" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M16.5465 12.1067L5.23985 0.800026C4.99195 0.550083 4.69701 0.351698 4.37205 0.216315C4.04709 0.0809318 3.69855 0.0112305 3.34651 0.0112305C2.99448 0.0112305 2.64593 0.0809318 2.32098 0.216315C1.99602 0.351698 1.70108 0.550083 1.45318 0.800026C0.956512 1.29966 0.677734 1.97553 0.677734 2.68003C0.677734 3.38452 0.956512 4.06039 1.45318 4.56003L10.8932 14L1.45318 23.44C0.956512 23.9397 0.677734 24.6155 0.677734 25.32C0.677734 26.0245 0.956512 26.7004 1.45318 27.2C1.70235 27.4472 1.99786 27.6427 2.32276 27.7754C2.64766 27.9081 2.99556 27.9754 3.34651 27.9734C3.69747 27.9754 4.04536 27.9081 4.37026 27.7754C4.69516 27.6427 4.99067 27.4472 5.23985 27.2L16.5465 15.8934C16.7965 15.6455 16.9948 15.3505 17.1302 15.0256C17.2656 14.7006 17.3353 14.3521 17.3353 14C17.3353 13.648 17.2656 13.2994 17.1302 12.9745C16.9948 12.6495 16.7965 12.3546 16.5465 12.1067Z"
-                                            fill="black" fillOpacity="0.6"/>
+                                            fill="black" fillOpacity="0.3"/>
                                     </svg>
                                 </div>
                             </div>
