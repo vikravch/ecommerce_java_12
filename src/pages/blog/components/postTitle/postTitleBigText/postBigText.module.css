@@ -1,0 +1,25 @@
+.postBigText {
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    display: grid;
+    width: 80%;
+    height: 540px;
+    grid-template-areas:
+     'bt st st'
+     'bt st st';
+    grid-template-columns:   5fr 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+
+}
+
+.bigText {
+    border: 2px solid black;
+    grid-area: bt;
+}
+
+.smallText {
+    border: 2px solid black;
+    grid-area: st;
+}

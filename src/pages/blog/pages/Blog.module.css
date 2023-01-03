@@ -1,0 +1,6 @@
+.blogGrid{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    border: solid 1px black;
+}
