@@ -4,6 +4,7 @@ import postsStyle from "./postsBlog.module.css"
 import {BiTimeFive} from "react-icons/bi";
 import {useAppDispatch, useAppSelector} from "../../../../general/hooks/redux";
 import {IBlogBody} from "../../models/IBlogBody";
+import {Link} from "react-router-dom";
 
 
 const PostsBlog = () => {
@@ -20,6 +21,7 @@ const PostsBlog = () => {
             {error && <h4>{error}</h4>}
             <div className={postsStyle.wrapperPostsBlog}>
                 {blogPost && blogPost.map((title: IBlogBody) =>
+                    <Link key={title.id} to = {`/blog/${title.id}`}>
                     title.blogImage ?
                         <div>
                             <img src={title.blogImage}/>
@@ -36,6 +38,7 @@ const PostsBlog = () => {
                                 <span>{title.dateBlog}</span>
                             </div>
                         </div>
+                    </Link>
                 )}
             </div>
         </div>
