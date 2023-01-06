@@ -1,7 +1,5 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {blogBigTitleAction} from "../actions/blogBigTitleAction";
-import {IBlogTitleResponse} from "../../models/IBlogTitleResponse";
-import {IBlogResponse} from "../../models/IBlogResponse";
 import {IBlogBigTitleResponse} from "../../models/IBlogBigTitleResponse";
 import {IBlogTitleBody} from "../../models/IBlogTitleBody";
 

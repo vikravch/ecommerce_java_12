@@ -22,7 +22,7 @@ const PostsBlog = () => {
             <div className={postsStyle.wrapperPostsBlog}>
                 {blogPost && blogPost.map((title: IBlogBody) =>
                     <Link key={title.id} to = {`/blog/${title.id}`}>
-                    title.blogImage ?
+                        { title.blogImage ?
                         <div>
                             <img src={title.blogImage}/>
                             <h4>{title.blogText}</h4>
@@ -37,7 +37,7 @@ const PostsBlog = () => {
                                 <BiTimeFive/>
                                 <span>{title.dateBlog}</span>
                             </div>
-                        </div>
+                        </div>}
                     </Link>
                 )}
             </div>

@@ -1,0 +1,89 @@
+h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 70px;
+    /* identical to box height, or 109% */
+
+    text-align: center;
+    letter-spacing: -3px;
+
+    /* Base / Black */
+
+    color: #000000;
+
+}
+
+h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height, or 122% */
+
+    letter-spacing: -1.2px;
+
+    /* Base / Black */
+
+    color: #000000;
+
+}
+
+p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    /* or 143% */
+
+    letter-spacing: -0.8px;
+
+    /* Grey / Dark / 5 */
+
+    color: rgba(0, 0, 0, 0.8);
+
+}
+
+.imgTitle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 850px;
+    border-radius: 10px;
+}
+
+image {
+    width: 410px;
+    border-radius: 10px;
+}
+
+.smallImageWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+.timeWrapper{
+    text-align: center;
+}
+
+.wrapperTime {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
+    display: grid;
+    grid-template-columns: 10px auto;
+    justify-content: center;
+    gap: 15px;
+    letter-spacing: -0.5px;
+    /* Grey / Dark / 4 */
+    color: rgba(0, 0, 0, 0.6);
+
+    /* Inside auto layout */
+    /*flex: none;*/
+    /*order: 0;*/
+    /*flex-grow: 0;*/
+
+
+}

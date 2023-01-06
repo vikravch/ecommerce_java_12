@@ -9,7 +9,6 @@ import {IFormData} from "../models/IFormData";
 import {useAppDispatch, useAppSelector} from "../../../general/hooks/redux";
 import {signInAction} from "../store/actions/signInAction";
 
-
 export const SignIn = () => {
     const dispatch = useAppDispatch();
     const {loginResponse, isLoading, errorSlice} = useAppSelector(state => state.signIn)
@@ -18,13 +17,10 @@ export const SignIn = () => {
         dispatch(signInAction({email: data.email, password: data.password}))
 
     };
-    if (localStorage.getItem('token')) {
-        console.log('redirect profile')
-    } else {
-        console.log('redirect SIGNUP')
-    }
+
 
     return (
+
         <div className={style.wrapperLogin}>
             {isLoading && <h1>LOADING..............</h1>}
             {errorSlice && <h1>{errorSlice}</h1>}

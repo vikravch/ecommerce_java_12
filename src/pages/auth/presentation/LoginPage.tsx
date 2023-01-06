@@ -6,6 +6,8 @@ import {SignUp} from "./SignUp";
 import {RestorePassword} from "./RestorePassword";
 import style from "./Loginization.module.css"
 
+import "../mirage/authServer"
+
 export const LoginPage = () => {
     return <div className={style.wrapper}>
         <Routes>

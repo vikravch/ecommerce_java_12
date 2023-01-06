@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import {blogBigTitleAction} from "../../../store/actions/blogBigTitleAction";
-import {IBlogTitleResponse} from "../../../models/IBlogTitleResponse";
 import titleBigTextStyle from "./postBigText.module.css"
 import {BiTimeFive} from "react-icons/bi";
 import {useAppDispatch, useAppSelector} from "../../../../../general/hooks/redux";
@@ -17,6 +16,7 @@ const PostTitleBigText = () => {
 
     return (
         <div>
+            {isLoading && <h1>Loading</h1>}
             {error && <h4>{error}</h4>}
             <div className={titleBigTextStyle.blogGrid}>
                 {blogBigTitles && blogBigTitles.map((title: IBlogTitleBody) => <div>

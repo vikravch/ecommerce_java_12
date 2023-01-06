@@ -1,0 +1,59 @@
+.wrapperPostsBlog {
+    margin-top: 98px;
+    display: grid;
+    grid-template-columns: 270px 270px;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.link {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.wrapperSmallBlock {
+    display: grid;
+    grid-auto-rows: 3fr 2fr 0.5fr;
+    background: #FFFFFF;
+    height: 100%;
+    /* Grey / Dark / 2 */
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    /* or 121% */
+
+    letter-spacing: -0.8px;
+
+    /* Base / Black */
+
+    color: #000000;
+
+}
+
+.wrapperTime {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
+    display: grid;
+    grid-template-columns: 10px auto;
+    gap: 15px;
+    letter-spacing: -0.5px;
+    /* Grey / Dark / 4 */
+    color: rgba(0, 0, 0, 0.6);
+
+    /* Inside auto layout */
+    /*flex: none;*/
+    /*order: 0;*/
+    /*flex-grow: 0;*/
+
+
+}

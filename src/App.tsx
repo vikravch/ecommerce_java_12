@@ -4,7 +4,7 @@ import {Route, Routes} from "react-router-dom";
 import {LoginPage} from "./pages/auth/presentation/LoginPage";
 import {CartMainPage} from "./pages/cart/presentation/CartMainPage";
 import {MainPage} from "./pages/main_page/presentation/MainPage";
-import Blog from "./pages/blog/pages/Blog";
+import Blog from "./pages/blog/presentation/Blog";
 import SinglePost from "./pages/blog/components/singlepost/SinglePost";
 
 
