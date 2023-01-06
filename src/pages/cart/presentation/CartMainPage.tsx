@@ -1,19 +1,22 @@
 import * as React from "react";
-import {useState} from "react";
-import {defaultItems} from "../data/data";
+
 import {CartTable} from "./cart/CartTable";
-import {Summary} from "./summary/Summary";
+
 import s from './cartMainPage.module.css'
-import {ItemsInfo} from "../types/index";
+import {Route, Routes} from "react-router-dom";
+import {MainPage} from "../../main_page/presentation/MainPage";
+
+
+
+
+
+
 
 
 
 
 
 export const CartMainPage: React.FC = (props) => {
-    const[cart, setCart] = useState<Array<ItemsInfo>>(defaultItems as Array<ItemsInfo>)
-
-    const products = cart.map((item) => <CartTable product={item} key={item.id}/>)
 
     return(
         <div className={s.general}>
@@ -29,17 +32,7 @@ export const CartMainPage: React.FC = (props) => {
                     </li>
 
                 </ul>
-
-                <h1 className={s.titleCart}>Cart</h1>
-                <div className='row'>
-
-                    <div className='col  '>
-
-                        {products}
-                    </div>
-                    <div className='col '> <Summary /></div>
-
-                </div>
+                       <CartTable/>
 
             </div>
 

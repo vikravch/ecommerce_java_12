@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {defaultItems} from '../../data/data';
 import s from './checkout.module.css'
+import {useDispatch, useSelector} from "react-redux";
+import {firstName} from "../../store/reducers/checkoutReducer";
 
 
 
 
 
 export const Checkout:React.FC = () => {
+
+    const dispatch = useDispatch()
+    const text = useSelector((state:any )=> state.firstName)
+
+
     return (
         <div>
 
@@ -110,8 +117,10 @@ export const Checkout:React.FC = () => {
                                         <td><h3 className={s.contactsTitle}>Contact</h3></td>
                                     </tr>
                                     <tr className='row'>
-                                        <td className='col col-md-6'><p className={s.generalText}>First name</p>
-                                            <input className={s.inputItem} type='text' name='first name'/></td>
+                                        <td className='col col-md-6'><p className={s.generalText}>First name {text}</p>
+                                            <input  className={s.inputItem} type='text' name='first name' onChange={(e) => {
+                                                dispatch(firstName(e.target.value))
+                                            }} /></td>
                                         <td className='col col-md-6'><p className={s.generalText}>Second name</p>
                                             <input className={s.inputItem} type='text' name='second name'/></td>
                                     </tr>

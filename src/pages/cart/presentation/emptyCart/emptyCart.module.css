@@ -1,0 +1,62 @@
+.title{
+
+    width: 391px;
+    height: 54px;
+
+
+    margin-top: 60px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 54px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -1.6px;
+
+    /* Grey / Dark / 3 */
+    color: rgba(0, 0, 0, 0.3);
+
+}
+.btn{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 18px 20px;
+    gap: 10px;
+
+
+    margin-top: 30px;
+
+    width: 192px;
+    height: 60px;
+
+    /* Base / Black */
+    background: #000000;
+    border-radius: 10px;
+}
+.btnText{
+    width: 148px;
+    height: 24px;
+
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+
+    letter-spacing: -0.6px;
+
+
+    color: #FFFFFF;
+
+
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
