@@ -1,25 +1,87 @@
-.postBigText {
-    margin: auto;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+.wrapperBody {
+    display: grid;
+    grid-template-rows: 1fr 0.5fr auto;
+    border-right: black solid 1px;
+    align-content: space-evenly;
+
+}
+
+
+h2 {
+    margin: 0 0 30px 0;
+    align-self: start;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 70px;
+    /* or 109% */
+
+    letter-spacing: -3px;
+
+    /* Base / Black */
+
+    color: #000000;
+}
+
+.wrapperTime {
+    align-self: end;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
+    display: grid;
+    grid-template-columns: 10px auto;
+    gap: 15px;
+    letter-spacing: -0.5px;
+    /* Grey / Dark / 4 */
+    color: rgba(0, 0, 0, 0.6);
+
+    /* Inside auto layout */
+    /*flex: none;*/
+    /*order: 0;*/
+    /*flex-grow: 0;*/
+
+
+}
+
+button {
+    align-self: start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 16px;
+    gap: 10px;
+
+
+    /* Base / Black */
+
+    background: #000000;
     border-radius: 10px;
 
-    display: grid;
-    width: 80%;
-    height: 540px;
-    grid-template-areas:
-     'bt st st'
-     'bt st st';
-    grid-template-columns:   5fr 1fr 1fr;
-    grid-template-rows:1fr 1fr;
+    width: 127px;
+    height: 20px;
 
-}
+    /* Caption / 2 / Medium */
 
-.bigText {
-    border: 2px solid black;
-    grid-area: bt;
-}
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
 
-.smallText {
-    border: 2px solid black;
-    grid-area: st;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.3px;
+
+    /* Base / White */
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }

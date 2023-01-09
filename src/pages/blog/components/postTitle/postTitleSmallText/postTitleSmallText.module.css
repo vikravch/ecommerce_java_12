@@ -1,4 +1,51 @@
 .wrapperSmallText{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 3em;
+
+}
+
+.wrapperBody{
+    display: grid;
+    grid-template-rows: 2fr auto;
+    justify-content: space-between;
+}
+
+.wrapperTime {
+    align-self: end;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
+    display: grid;
+    grid-template-columns: 10px auto;
+    gap: 15px;
+    letter-spacing: -0.5px;
+    /* Grey / Dark / 4 */
+    color: rgba(0, 0, 0, 0.6);
+
+    /* Inside auto layout */
+    /*flex: none;*/
+    /*order: 0;*/
+    /*flex-grow: 0;*/
+
+
+}
+
+h5{
+    margin: 0 0 50px 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    /* or 121% */
+
+    letter-spacing: -0.8px;
+    text-transform: capitalize;
+
+    /* Base / Black */
+
+    color: #000000;
+
 }

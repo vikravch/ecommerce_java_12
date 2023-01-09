@@ -19,12 +19,13 @@ const PostTitleSmallText = () => {
             {isLoading && <h1>Loading.......</h1>}
             {error && <h4>{error}</h4>}
             <div className={titleSmallTextStyle.wrapperSmallText}>
-                {blogTitles && blogTitles.map((title: IBlogTitleBody) => <div>
-                        <h1>{title.blogTitleText}</h1>
-                    <div>
-                        <BiTimeFive/>
-                        <span>{title.dateBlog}</span>
-                    </div>
+                {blogTitles && blogTitles.map((title: IBlogTitleBody) =>
+                    <div className={titleSmallTextStyle.wrapperBody}>
+                        <h5>{title.blogTitleText}</h5>
+                        <div className={titleSmallTextStyle.wrapperTime}>
+                            <BiTimeFive/>
+                            <span>{title.dateBlog}</span>
+                        </div>
                     </div>
                 )}
             </div>

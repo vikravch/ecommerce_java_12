@@ -18,10 +18,12 @@ const PostTitleBigText = () => {
         <div>
             {isLoading && <h1>Loading</h1>}
             {error && <h4>{error}</h4>}
-            <div className={titleBigTextStyle.blogGrid}>
-                {blogBigTitles && blogBigTitles.map((title: IBlogTitleBody) => <div>
-                        <h1>{title.blogTitleText}</h1>
-                        <div>
+            <div>
+                {blogBigTitles && blogBigTitles.map((title: IBlogTitleBody) =>
+                    <div className={titleBigTextStyle.wrapperBody}>
+                        <h2>{title.blogTitleText}</h2>
+                        <button>Read more</button>
+                        <div className={titleBigTextStyle.wrapperTime}>
                             <BiTimeFive/>
                             <span>{title.dateBlog}</span>
                         </div>

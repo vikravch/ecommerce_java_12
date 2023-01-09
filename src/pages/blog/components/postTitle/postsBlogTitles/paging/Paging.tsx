@@ -1,6 +1,6 @@
 import React from 'react';
 import pagingStyle from "./paging.module.css"
-import {useAppSelector} from "../../../../general/hooks/redux";
+import {useAppSelector} from "../../../../../../general/hooks/redux";
 
 
 const Paging = () => {

@@ -1,9 +1,11 @@
-.wrapperPostsBlog {
-    margin-top: 98px;
+.wrapperPostsBlog{
+    margin: 98px 30px 30px 30px;
     display: grid;
-    grid-template-columns: 270px 270px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content;
     justify-content: center;
-    gap: 2rem;
+    align-content: center;
+    gap: 1rem;
 }
 
 .link {
@@ -17,9 +19,10 @@ img {
 
 .wrapperSmallBlock {
     display: grid;
-    grid-auto-rows: 3fr 2fr 0.5fr;
+    grid-auto-rows: auto auto auto;
+    align-content: space-between;
     background: #FFFFFF;
-    height: auto;
+    height: 50vh;
     /* Grey / Dark / 2 */
 
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -57,3 +60,4 @@ img {
 
 
 }
+
