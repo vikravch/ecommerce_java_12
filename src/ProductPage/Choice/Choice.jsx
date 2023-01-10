@@ -7,6 +7,10 @@ import photo4 from '../Photos/iconColorImg/Image4.svg'
 
 const Choice = () => {
 
+    // fetch('http://example.com/movies.json')
+    //     .then((response) => response.json())
+    //     .then((data) => console.log(data));
+
     const setColorOfThing = (e) => {
         e.preventDefault();
         let allPic = e.currentTarget.children;

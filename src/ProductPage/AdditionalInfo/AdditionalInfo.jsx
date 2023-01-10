@@ -1,5 +1,5 @@
-import React from 'react'
-import style from './additionalInfo.module.scss'
+import React from 'react';
+import style from './additionalInfo.module.scss';
 
 const AdditionalInfo = () => {
     return (
