@@ -1,169 +1,245 @@
 import {MenuItem} from "./types";
+import {IMenuItem} from "../../shared/types/root.interfaces";
 
-export const menuItems: MenuItem[] = [
+export const menuItems: IMenuItem[] = [
 	{
 		name: 'Categories',
 		icon: 'categories',
-		items: [
-			{name: 'All'},
-			{name: 'Coats & Jackets'},
-			{name: 'T-shirts'},
-			{name: 'Tops'},
-			{name: 'Trousers'},
-			{name: 'Jumpsuits & Rompers'},
-			{name: 'Pants'},
-			{name: 'Shorts'},
-			{name: 'Sweaters'},
-			{name: 'Shoes'},
+		checkType: 'none',
+		textStyle: 'sidebar_item_text',
+		items_data: [
+			{
+				name: 'All',
+				checkValue: 'checked',
+				isAdded: true,
+			},
+			{
+				name: 'Coats & Jackets',
+				checkValue: 'unchecked',
+				isAdded: false,
+			},
+			{
+				name: 'T-shirts',
+				checkValue: 'unchecked',
+				isAdded: false,
+			},
+			{
+				name: 'Tops',
+				checkValue: 'unchecked',
+				isAdded: false,
+			},
+			{
+				name: 'Trousers',
+				checkValue: 'unchecked',
+				isAdded: false,
+			},
+			{
+				name: 'Jumpsuits & Rompers',
+				checkValue: 'unchecked',
+				isAdded: false,
+			},
+			{
+				name: 'Pants',
+				checkValue: 'unchecked',
+				isAdded: false,
+			},
+			{
+				name: 'Shorts',
+				checkValue: 'unchecked',
+				isAdded: false,
+			},
+			{
+				name: 'Sweaters',
+				checkValue: 'unchecked',
+				isAdded: false,
+			},
+			{
+				name: 'Shoes',
+				checkValue: 'unchecked',
+				isAdded: false,
+			},
 		]
 	},
 	{
 		name: 'Price',
 		icon: 'price',
-		inputType: 'checkbox',
-		items: [
+		checkType: 'checkbox',
+		textStyle: 'sidebar_item_text',
+		items_data: [
 			{
 				name: 'Under 100$',
-				isChecked: true,
+				isAdded: true,
+				checkValue: 'checked',
 			},
 			{
 				name: '100$ - 200$',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: '200$ - 400$',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: '400$ - 600$',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: 'Over 600$',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 		]
 	},
 	{
 		name: 'Size',
 		icon: 'size',
-		inputType: 'checkbox',
-		items: [
+		checkType: 'checkbox',
+		textStyle: 'sidebar_item_text',
+		items_data: [
 			{
 				name: 'XS',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'disabled',
 			},
 			{
 				name: 'S',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: 'M',
-				isChecked: true,
+				isAdded: true,
+				checkValue: 'checked',
 			},
 			{
 				name: 'L',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: 'XL',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'disabled',
 			},
 			{
 				name: 'XXL',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 		]
 	},
 	{
 		name: 'Collection',
 		icon: 'collection',
-		inputType: 'checkbox',
-		items: [
+		checkType: 'checkbox',
+		textStyle: 'sidebar_item_text',
+		items_data: [
 			{
 				name: 'One',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: 'Two',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: 'Three',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: 'Four',
-				isChecked: true,
+				isAdded: true,
+				checkValue: 'checked',
 			},
 		]
 	},
 	{
 		name: 'Brand',
 		icon: 'brand',
-		inputType: 'checkbox',
-		items: [
+		checkType: 'checkbox',
+		textStyle: 'sidebar_item_text',
+		items_data: [
 			{
 				name: "Levi's",
-				isChecked: true,
+				isAdded: true,
+				checkValue: 'checked',
 			},
 			{
 				name: "Jungmaven",
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: "Sunspel",
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: "Uniqlo",
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: "Aime Leon Dore",
-				isChecked: true,
+				isAdded: true,
+				checkValue: 'checked',
 			},
 		]
 	},
 	{
 		name: 'Style',
 		icon: 'style',
-		inputType: 'radio',
-		items: [
+		checkType: 'ratio',
+		textStyle: 'sidebar_item_text',
+		items_data: [
 			{
 				name: "All styles",
-				isChecked: true,
+				isAdded: true,
+				checkValue: 'checked',
 			},
 			{
 				name: "A-Line",
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: "Graphic T-Shirts",
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 		]
 	},
 	{
 		name: 'Season',
 		icon: 'season',
-		inputType: 'checkbox',
-		items: [
+		checkType: 'checkbox',
+		textStyle: 'sidebar_item_text',
+		items_data: [
 			{
 				name: 'Spring',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 			{
 				name: 'Summer',
-				isChecked: true,
+				isAdded: true,
+				checkValue: 'checked',
 			},
 			{
 				name: 'Fall',
-				isChecked: true,
+				isAdded: true,
+				checkValue: 'checked',
 			},
 			{
 				name: 'Winter',
-				isChecked: false,
+				isAdded: false,
+				checkValue: 'unchecked',
 			},
 		]
 	}

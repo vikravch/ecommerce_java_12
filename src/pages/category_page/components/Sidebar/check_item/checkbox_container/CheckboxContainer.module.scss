@@ -1,0 +1,65 @@
+@import "src/pages/category_page/styles/variables";
+
+.checked, .unchecked {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.disabled {
+  display: flex;
+  align-items: center;
+  cursor: no-drop;
+
+  & > span {
+    opacity: .3;
+    margin-left: 8px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.categories:hover {
+  text-decoration: underline;
+}
+
+.categories_active {
+  color: $bg_active_color;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+//For Sizes
+.sizes_checkbox_container:nth-child(1) {
+  order: 1;
+}
+
+.sizes_checkbox_container:nth-child(2) {
+  order: 3;
+}
+
+.sizes_checkbox_container:nth-child(3) {
+  order: 5;
+}
+
+.sizes_checkbox_container:nth-child(4) {
+  order: 2;
+}
+
+.sizes_checkbox_container:nth-child(5) {
+  order: 4;
+}
+
+.sizes_checkbox_container:nth-child(6) {
+  order: 6;
+}
