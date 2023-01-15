@@ -30,13 +30,13 @@ const SinglePostBody: React.FC = () => {
                             <p className={style.styleP}>{title.blogBodyText1}</p>
                             <h4 className={style.styleH4}>{title.blogTitleSmall1}</h4>
                             <p className={style.styleP}>{title.blogBodyText2}</p>
-                            <img className={style.imgTitle} src={title.blogImage} alt='photo'/>
+                            <img className={style.imgTitle} src={title.blogImage} alt='photoTitle'/>
                             <p className={style.styleP}>{title.blogBodyText3}</p>
                             <h4 className={style.styleH4}>{title.blogTitleSmall2}</h4>
                             <p className={style.styleP}>{title.blogBodyText4}</p>
                             <div className={style.smallImageWrapper}>
-                                <img className={style.styleImage} src={title.blogImageSmall1} alt='photo'/>
-                                <img className={style.styleImage} src={title.blogImageSmall2} alt='photo'/>
+                                <img className={style.styleImage} src={title.blogImageSmall1} alt='photo1'/>
+                                <img className={style.styleImage} src={title.blogImageSmall2} alt='photo2'/>
                             </div>
                         </div>
                     </div>

@@ -8,6 +8,7 @@ import {schemaSignIn} from "../components/validations";
 import {IFormData} from "../models/IFormData";
 import {useAppDispatch, useAppSelector} from "../../../general/hooks/redux";
 import {signInAction} from "../store/actions/signInAction";
+import React from "react";
 
 export const SignIn = () => {
     const dispatch = useAppDispatch();
@@ -20,7 +21,6 @@ export const SignIn = () => {
 
 
     return (
-
         <div className={style.wrapperLogin}>
             {isLoading && <h1>LOADING..............</h1>}
             {errorSlice && <h1>{errorSlice}</h1>}

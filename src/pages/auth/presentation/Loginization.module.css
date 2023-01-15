@@ -1,3 +1,23 @@
+.linkWrapper {
+    position: absolute;
+    left: 57px;
+
+}
+
+.styleLink{
+    text-decoration: none;
+    font-style: normal;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.styleSpan {
+    text-decoration: none;
+    font-style: normal;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 1);
+}
+
 .wrapper {
     position: absolute;
     width: 100%;
@@ -23,7 +43,7 @@
     border-radius: 10px;
 }
 
-input{
+input {
     outline: none;
     border: none;
     font-size: 18px;
@@ -33,7 +53,6 @@ input{
 .inputStyles {
     display: grid;
     grid-template-columns: auto auto;
-
 
 
     /*box-sizing: border-box;*/
@@ -227,8 +246,8 @@ input{
 
 }
 
-.iconInInputPassword{
-display: grid;
+.iconInInputPassword {
+    display: grid;
     justify-content: center;
     align-content: center;
 }
