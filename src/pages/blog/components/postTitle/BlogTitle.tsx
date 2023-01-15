@@ -11,7 +11,7 @@ const BlogTitle = () => {
         <div className={style.wrapper}>
             <div className={style.link}>
                 <Link className={style.link} to={'/'}>Main / </Link>
-                <span>Blog</span>
+                <span className={style.styleSpan}>Blog</span>
             </div>
 
             <div className={style.wrapperTitle}>

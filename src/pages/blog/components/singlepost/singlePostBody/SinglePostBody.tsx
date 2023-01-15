@@ -22,21 +22,21 @@ const SinglePostBody: React.FC = () => {
                     <div>
                         <SingleLink linkEnd={title.blogText}/>
                         <div className={style.singlePostWrapper}>
-                            <h1>{title.blogText}</h1>
+                            <h1 className={style.styleH1}>{title.blogText}</h1>
                             <div className={style.wrapperTime}>
                                 <BiTimeFive/>
                                 <span>{title.dateBlog}</span>
                             </div>
-                            <p>{title.blogBodyText1}</p>
-                            <h4>{title.blogTitleSmall1}</h4>
-                            <p>{title.blogBodyText2}</p>
+                            <p className={style.styleP}>{title.blogBodyText1}</p>
+                            <h4 className={style.styleH4}>{title.blogTitleSmall1}</h4>
+                            <p className={style.styleP}>{title.blogBodyText2}</p>
                             <img className={style.imgTitle} src={title.blogImage} alt='photo'/>
-                            <p>{title.blogBodyText3}</p>
-                            <h4>{title.blogTitleSmall2}</h4>
-                            <p>{title.blogBodyText4}</p>
+                            <p className={style.styleP}>{title.blogBodyText3}</p>
+                            <h4 className={style.styleH4}>{title.blogTitleSmall2}</h4>
+                            <p className={style.styleP}>{title.blogBodyText4}</p>
                             <div className={style.smallImageWrapper}>
-                                <img src={title.blogImageSmall1} alt='photo'/>
-                                <img src={title.blogImageSmall2} alt='photo'/>
+                                <img className={style.styleImage} src={title.blogImageSmall1} alt='photo'/>
+                                <img className={style.styleImage} src={title.blogImageSmall2} alt='photo'/>
                             </div>
                         </div>
                     </div>

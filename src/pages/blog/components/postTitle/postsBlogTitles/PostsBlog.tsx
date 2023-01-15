@@ -24,7 +24,7 @@ const PostsBlog = () => {
                     <Link className={postsStyle.link} key={title.id} to={`/blog/${title.id}`}>
                         {title.blogImage ?
                             <div className={postsStyle.wrapperSmallBlock}>
-                                <img src={title.blogImage}/>
+                                <img className={postsStyle.styleImg} src={title.blogImage}/>
                                 <p>{title.blogText}</p>
                                 <div className={postsStyle.wrapperTime}>
                                     <BiTimeFive/>

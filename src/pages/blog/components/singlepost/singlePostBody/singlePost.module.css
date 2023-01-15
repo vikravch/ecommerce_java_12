@@ -1,4 +1,4 @@
-h1 {
+.styleH1 {
     font-style: normal;
     font-weight: 500;
     font-size: 64px;
@@ -19,7 +19,7 @@ h1 {
     margin: auto;
 }
 
-h4 {
+.styleH4 {
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
@@ -34,7 +34,7 @@ h4 {
 
 }
 
-p {
+.styleP {
     font-style: normal;
     font-weight: 400;
     font-size: 21px;
@@ -57,7 +57,7 @@ p {
     border-radius: 10px;
 }
 
-image {
+.styleImage {
     width: 410px;
     border-radius: 10px;
 }

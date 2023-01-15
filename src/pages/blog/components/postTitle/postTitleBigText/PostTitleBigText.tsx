@@ -21,8 +21,8 @@ const PostTitleBigText = () => {
             <div>
                 {blogBigTitles && blogBigTitles.map((title: IBlogTitleBody) =>
                     <div className={titleBigTextStyle.wrapperBody}>
-                        <h2>{title.blogTitleText}</h2>
-                        <button>Read more</button>
+                        <h2 className={titleBigTextStyle.styleH2}>{title.blogTitleText}</h2>
+                        <button className={titleBigTextStyle.styleButton}>Read more</button>
                         <div className={titleBigTextStyle.wrapperTime}>
                             <BiTimeFive/>
                             <span>{title.dateBlog}</span>

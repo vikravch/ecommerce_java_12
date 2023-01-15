@@ -7,7 +7,7 @@ const SingleLink = (props: {linkEnd: any;}) => {
         <div>
             <Link className={style.link} to={'/'}>Main /</Link>
             <Link className={style.link} to={'/blog/'}> Blog</Link>
-            <span> / {props.linkEnd}</span>
+            <span className={style.styleSpan}> / {props.linkEnd}</span>
         </div>
     );
 };

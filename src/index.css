@@ -7,9 +7,9 @@ body {
     /*  sans-serif;*/
 
     font-family: 'Inter', serif;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    /*font-style: normal;*/
+    /*-webkit-font-smoothing: antialiased;*/
+    /*-moz-osx-font-smoothing: grayscale;*/
 }
 
 code {
