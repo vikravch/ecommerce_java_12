@@ -1,29 +1,40 @@
-import {FormProvider, useForm} from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import style from "./Loginization.module.css"
-import {Link} from "react-router-dom";
+import { Link, Navigate, redirect, useNavigate } from "react-router-dom";
 import InputEmail from "../components/InputEmail";
 import InputPassword from "../components/InputPassword";
-import {yupResolver} from "@hookform/resolvers/yup";
-import {schemaSignIn} from "../components/validations";
-import {IFormData} from "../models/IFormData";
-import {useAppDispatch, useAppSelector} from "../../../general/hooks/redux";
-import {signInAction} from "../store/actions/signInAction";
-import React from "react";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { schemaSignIn } from "../components/validations";
+import { IFormData } from "../models/IFormData";
+import { useAppDispatch, useAppSelector } from "../../../general/hooks/redux";
+import { signInAction } from "../store/actions/signInAction";
+import React, { useEffect } from "react";
 
-export const SignIn = () => {
+export const SignIn: React.FC = () => {
     const dispatch = useAppDispatch();
-    const {loginResponse, isLoading, errorSlice} = useAppSelector(state => state.signIn)
-    const methods = useForm<IFormData>({resolver: yupResolver(schemaSignIn)});
+    const { loginResponse, isLoading, errorSlice } = useAppSelector(state => state.signIn)
+    const methods = useForm<IFormData>({ resolver: yupResolver(schemaSignIn) });
     const onSubmit = (data: IFormData) => {
-        dispatch(signInAction({email: data.email, password: data.password}))
+        dispatch(signInAction({ email: data.email, password: data.password }))
 
     };
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        if (loginResponse.accessToken) {
+            console.log(loginResponse.accessToken);
+            navigate("/profile")
+        }
+
+    }, [loginResponse.accessToken]);
+
 
 
     return (
         <div className={style.wrapperLogin}>
             {isLoading && <h1>LOADING..............</h1>}
             {errorSlice && <h1>{errorSlice}</h1>}
+
             <div className={style.titleContainer}>
                 <div className={style.title1}>
                     <p>Sign In</p>
@@ -43,8 +54,8 @@ export const SignIn = () => {
             </div>
             <FormProvider {...methods} >
                 <form className={style.formStyle} onSubmit={methods.handleSubmit(onSubmit)}>
-                    <InputEmail/>
-                    <InputPassword/>
+                    <InputEmail />
+                    <InputPassword />
                     <button className={style.buttonLogin}>Login</button>
                 </form>
             </FormProvider>

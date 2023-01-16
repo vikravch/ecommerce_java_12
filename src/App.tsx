@@ -6,6 +6,7 @@ import {CartMainPage} from "./pages/cart/presentation/CartMainPage";
 import {MainPage} from "./pages/main_page/presentation/MainPage";
 import BlogTitle from "./pages/blog/components/postTitle/BlogTitle";
 import SinglePost from "./pages/blog/components/singlepost/SinglePost";
+import Profile from './pages/profile_page/Profile';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path={'/cart'} element={<CartMainPage/>}/>
             <Route path={'/blog'} element={<BlogTitle/>}/>
             <Route path={'/blog/:id'} element={<SinglePost/>}/>
+            <Route path={'/profile'} element={<Profile/>}/>
         </Routes>
     );
 }
