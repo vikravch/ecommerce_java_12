@@ -1,12 +1,10 @@
 // @flow
 import {SignIn} from "./SignIn";
-import React, {useEffect} from "react";
+import React from "react";
 import {Link, Route, Routes, useLocation} from "react-router-dom";
 import {SignUp} from "./SignUp";
 import {RestorePassword} from "./RestorePassword";
 import style from "./Loginization.module.css"
-
-import "../mirage/authServer"
 
 export const LoginPage = () => {
     let location = useLocation();

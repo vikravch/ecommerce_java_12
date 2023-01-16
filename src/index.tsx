@@ -6,7 +6,6 @@ import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import {setupSore} from "./general/redux/store";
 
-import "../src/pages/auth/mirage/authServer"
 import "../src/pages/blog/server/blogServer"
 
 export const store = setupSore();
