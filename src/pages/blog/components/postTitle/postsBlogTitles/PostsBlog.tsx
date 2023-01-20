@@ -25,13 +25,13 @@ const PostsBlog = () => {
                         {title.blogImage ?
                             <div className={postsStyle.wrapperSmallBlock}>
                                 <img className={postsStyle.styleImg} src={title.blogImage}/>
-                                <p>{title.blogText}</p>
+                                <p className={postsStyle.styleP}>{title.blogText}</p>
                                 <div className={postsStyle.wrapperTime}>
                                     <BiTimeFive/>
                                     <span>{title.dateBlog}</span>
                                 </div>
                             </div> :
-                            <div>
+                            <div className={postsStyle.wrapperSmallBlockNoImg}>
                                 <p>{title.blogText}</p>
                                 <div className={postsStyle.wrapperTime}>
                                     <BiTimeFive/>

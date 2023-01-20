@@ -41,7 +41,6 @@ const SinglePostBody: React.FC = () => {
                         </div>
                     </div>
                 )}
-            <hr/>
         </div>
     );
 };

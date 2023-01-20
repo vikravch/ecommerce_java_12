@@ -15,7 +15,8 @@ const SinglePostFooter:React.FC = () => {
     }, [dispatch]);
 
 
-    return (
+    return (<>
+            <hr className={style.styleHr}/>
         <div className={style.wrapperPostsBlog}>
             {blogPost && blogPost
                 .filter((filterTitle) => (filterTitle.id === 3 || filterTitle.id === 5) )
@@ -23,14 +24,14 @@ const SinglePostFooter:React.FC = () => {
                     <Link className={style.link} key={title.id} to = {`/blog/${title.id}`}>
                         { title.blogImage ?
                             <div className={style.wrapperSmallBlock}>
-                                <img src={title.blogImage}/>
-                                <p>{title.blogText}</p>
+                                <img className={style.styleImg} src={title.blogImage}/>
+                                <p className={style.styleP}>{title.blogText}</p>
                                 <div className={style.wrapperTime}>
                                     <BiTimeFive/>
                                     <span>{title.dateBlog}</span>
                                 </div>
                             </div> :
-                            <div>
+                            <div className={style.wrapperSmallBlockNoImg}>
                                 <p>{title.blogText}</p>
                                 <div>
                                     <BiTimeFive/>
@@ -39,8 +40,10 @@ const SinglePostFooter:React.FC = () => {
                             </div>}
                     </Link>
                 )}
-            <hr/>
+
         </div>
+
+        </>
     );
 
 };
