@@ -213,7 +213,7 @@ createServer({
                         blogBodyText4: BLOG_TEXT_BODY_1_4,
                     },
                 ],
-                totalCount: 40,
+                totalCount: 1100,
             }
         })
 

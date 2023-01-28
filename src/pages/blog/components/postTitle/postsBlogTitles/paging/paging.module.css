@@ -1,3 +1,6 @@
-.selectedPage{
-    color: red;
+.paginator{
+    display: grid;
+
+    justify-items: center;
 }
+

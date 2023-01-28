@@ -1,0 +1,69 @@
+/* .selectPage{
+    font-weight: bold;
+    color: brown;
+}
+.allPages{
+    cursor: pointer;
+} */
+
+
+.paginator {
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    background: #FFFFFF;
+    /* Grey / Dark / 2 */
+    color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*align-items: center;*/
+    display: grid;
+    /*align-items: center;*/
+    /*text-align: center;*/
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    align-items: center;
+
+
+    padding: 0px;
+}
+
+.pageNumber {
+    width: 12px;
+    height: 20px;
+
+    /* Caption / 2 / Regular */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
+
+
+
+    /* Grey / Dark / 3 */
+
+    color: rgba(0, 0, 0, 0.3);
+
+
+    /* Inside auto layout */
+
+    /*flex: none;*/
+    /*order: 1;*/
+    /*flex-grow: 0;*/
+
+}
+
+.pageNumber.selectedPage {
+    background-color: #2D74FF;
+    color: white;
+}
+
+.styleButton {
+    background: #FFFFFF;
+    border: none;
+}

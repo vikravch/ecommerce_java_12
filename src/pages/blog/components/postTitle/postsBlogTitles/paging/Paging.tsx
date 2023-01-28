@@ -1,27 +1,22 @@
 import React from 'react';
 import pagingStyle from "./paging.module.css"
 import {useAppSelector} from "../../../../../../general/hooks/redux";
+import Paginator from "./paginator/Paginator";
 
 
 const Paging = () => {
     const {maxItems, currentPage} = useAppSelector(state => state.blog);
 
-    // @ts-ignore
-    let pagesCount = Math.ceil(maxItems / 6)
-    let pages = [];
-    for (let i = 1; i <= pagesCount; i++) {
-        pages.push(i);
-    }
-
 
     let setCurrentPage;
     return (
-        <div>
-            {pages.map((p) =>
-                // @ts-ignore
-                <span className={currentPage === p && pagingStyle.selectedPage}
-               // onClick={() => setCurrentPage}
-                >{p}</span>)}
+        <div className={pagingStyle.paginator}>
+            <Paginator
+                totalItemsCount={maxItems}
+                pageSize={10}
+                currentPage={currentPage}
+                onPageChanged={10}
+            />
         </div>
     );
 };
